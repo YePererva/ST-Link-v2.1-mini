@@ -845,25 +845,15 @@ Text Label 10200 5400 2    50   ~ 0
 T_SWIM
 Text Label 10200 5500 2    50   ~ 0
 T_NRST_SWIM
-Wire Wire Line
-	10600 6400 10500 6400
-Wire Wire Line
-	10600 6300 10500 6300
-Wire Wire Line
-	10600 6200 10500 6200
-Wire Wire Line
-	10600 6100 10500 6100
-Wire Wire Line
-	10600 6000 10500 6000
-Text Label 10200 6400 2    50   ~ 0
+Text Label 10100 6400 2    50   ~ 0
 T_SWO
-Text Label 10200 6300 2    50   ~ 0
+Text Label 10100 6300 2    50   ~ 0
 T_SWDIO
-Text Label 10200 6200 2    50   ~ 0
+Text Label 10100 6200 2    50   ~ 0
 T_SWDCLK
-Text Label 10200 6100 2    50   ~ 0
+Text Label 10100 6100 2    50   ~ 0
 T_NRST_SWD
-Text Label 10500 6000 2    50   ~ 0
+Text Label 10400 6000 2    50   ~ 0
 T_Vref
 NoConn ~ 1150 5550
 NoConn ~ 1150 6650
@@ -891,47 +881,25 @@ Text Label 2750 6150 0    50   ~ 0
 T_SWO
 NoConn ~ 1150 5250
 $Comp
-L Device:R R31
-U 1 1 5E239BA0
-P 10350 6400
-F 0 "R31" V 10400 6550 50  0000 C CNN
-F 1 "22R" V 10350 6400 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 10280 6400 50  0001 C CNN
-F 3 "~" H 10350 6400 50  0001 C CNN
-	1    10350 6400
-	0    1    -1   0   
-$EndComp
-$Comp
-L Device:R R30
-U 1 1 5E241EAA
-P 10350 6300
-F 0 "R30" V 10400 6450 50  0000 C CNN
-F 1 "22R" V 10350 6300 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 10280 6300 50  0001 C CNN
-F 3 "~" H 10350 6300 50  0001 C CNN
-	1    10350 6300
-	0    1    -1   0   
-$EndComp
-$Comp
 L Device:R R29
 U 1 1 5E241FEE
-P 10350 6200
-F 0 "R29" V 10400 6350 50  0000 C CNN
-F 1 "22R" V 10350 6200 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 10280 6200 50  0001 C CNN
-F 3 "~" H 10350 6200 50  0001 C CNN
-	1    10350 6200
+P 10250 6200
+F 0 "R29" V 10300 6400 50  0000 C CNN
+F 1 "22R" V 10250 6200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 10180 6200 50  0001 C CNN
+F 3 "~" H 10250 6200 50  0001 C CNN
+	1    10250 6200
 	0    1    -1   0   
 $EndComp
 $Comp
 L Device:R R28
 U 1 1 5E242103
-P 10350 6100
-F 0 "R28" V 10400 6250 50  0000 C CNN
-F 1 "22R" V 10350 6100 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 10280 6100 50  0001 C CNN
-F 3 "~" H 10350 6100 50  0001 C CNN
-	1    10350 6100
+P 10250 6100
+F 0 "R28" V 10300 6300 50  0000 C CNN
+F 1 "22R" V 10250 6100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 10180 6100 50  0001 C CNN
+F 3 "~" H 10250 6100 50  0001 C CNN
+	1    10250 6100
 	0    1    -1   0   
 $EndComp
 Text Label 1150 6450 2    50   ~ 0
@@ -939,22 +907,22 @@ T_SWDCLK
 $Comp
 L Device:R R22
 U 1 1 5E2426E2
-P 9700 6300
-F 0 "R22" V 9600 6300 50  0000 C CNN
-F 1 "100R" V 9700 6300 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 9630 6300 50  0001 C CNN
-F 3 "~" H 9700 6300 50  0001 C CNN
-	1    9700 6300
+P 9600 6300
+F 0 "R22" V 9500 6300 50  0000 C CNN
+F 1 "100R" V 9600 6300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 9530 6300 50  0001 C CNN
+F 3 "~" H 9600 6300 50  0001 C CNN
+	1    9600 6300
 	0    -1   1    0   
 $EndComp
-Text Label 9550 6300 2    50   ~ 0
+Text Label 9450 6300 2    50   ~ 0
 T_SWDIO_IN
 Text Label 1150 6350 2    50   ~ 0
 T_SWDIO_IN
 Text Label 1150 6550 2    50   ~ 0
 T_SWDIO
 Wire Wire Line
-	10200 6300 9850 6300
+	10100 6300 9750 6300
 Text Label 2450 5650 0    50   ~ 0
 T_SWDCLK
 $Comp
@@ -1166,7 +1134,7 @@ Text GLabel 10700 3200 2    50   Output ~ 0
 T_SWDIOh
 Text GLabel 10700 3300 2    50   Output ~ 0
 T_SWDCLKh
-Text GLabel 8700 3750 2    50   Input ~ 0
+Text GLabel 8700 3850 2    50   Input ~ 0
 T_SWOh
 Text GLabel 10700 3600 2    50   Output ~ 0
 T_NRST_SWDh
@@ -1360,7 +1328,7 @@ U 1 1 5E279A8B
 P 1800 1100
 F 0 "F1" V 1575 1100 50  0000 C CNN
 F 1 "1A" V 1666 1100 50  0000 C CNN
-F 2 "Fuse:Fuse_1210_3225Metric" H 1850 900 50  0001 L CNN
+F 2 "Fuse:Fuse_1206_3216Metric" H 1850 900 50  0001 L CNN
 F 3 "~" H 1800 1100 50  0001 C CNN
 	1    1800 1100
 	0    1    1    0   
@@ -1590,7 +1558,7 @@ Text GLabel 8650 800  0    50   Input ~ 0
 T_Vref
 Text GLabel 8700 3350 2    50   Input ~ 0
 T_Vref
-Text GLabel 8700 3450 2    50   Output ~ 0
+Text GLabel 8700 3650 2    50   Output ~ 0
 T_SWDIOh
 $Comp
 L power:GNDREF #PWR044
@@ -1603,9 +1571,9 @@ F 3 "" H 9450 3600 50  0001 C CNN
 	1    9450 3600
 	-1   0    0    -1  
 $EndComp
-Text GLabel 8700 3650 2    50   Output ~ 0
+Text GLabel 8700 3450 2    50   Output ~ 0
 T_SWDCLKh
-Text GLabel 8700 3850 2    50   Output ~ 0
+Text GLabel 8700 3750 2    50   Output ~ 0
 T_NRST_SWDh
 Text GLabel 8700 3150 2    50   Output ~ 0
 T_VCP_RXh
@@ -1653,7 +1621,7 @@ F 3 "" H 7750 2700 50  0001 C CNN
 	1    7750 2700
 	1    0    0    -1  
 $EndComp
-Text GLabel 8000 2950 0    50   Input ~ 0
+Text GLabel 8000 3150 0    50   Input ~ 0
 Self_SWDIOh
 $Comp
 L power:GNDREF #PWR033
@@ -1666,7 +1634,7 @@ F 3 "" H 7300 3100 50  0001 C CNN
 	1    7300 3100
 	-1   0    0    -1  
 $EndComp
-Text GLabel 8000 3150 0    50   Input ~ 0
+Text GLabel 8000 2950 0    50   Input ~ 0
 Self_SWDCLKh
 Text GLabel 8000 3250 0    50   Input ~ 0
 Self_NRSTh
@@ -1724,8 +1692,8 @@ Wire Wire Line
 	8000 2850 7750 2850
 Wire Wire Line
 	7750 2850 7750 2700
-Text Notes 8400 4100 0    50   ~ 0
-Top-Right 4 pins:\nERNI SWIM connector
+Text Notes 8450 4250 0    50   ~ 0
+Top-Right 4 pins:\nERNI SWIM connector\nBottom-Right Pins: \nNucleo SWD connector
 Wire Wire Line
 	6550 2200 6500 2200
 Connection ~ 6500 2200
@@ -1778,4 +1746,36 @@ F 3 "~" H 8500 3250 50  0001 C CNN
 	1    8500 3250
 	-1   0    0    -1  
 $EndComp
+$Comp
+L Device:R R30
+U 1 1 5E241EAA
+P 10250 6300
+F 0 "R30" V 10300 6500 50  0000 C CNN
+F 1 "22R" V 10250 6300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 10180 6300 50  0001 C CNN
+F 3 "~" H 10250 6300 50  0001 C CNN
+	1    10250 6300
+	0    1    -1   0   
+$EndComp
+$Comp
+L Device:R R31
+U 1 1 5E239BA0
+P 10250 6400
+F 0 "R31" V 10300 6600 50  0000 C CNN
+F 1 "22R" V 10250 6400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 10180 6400 50  0001 C CNN
+F 3 "~" H 10250 6400 50  0001 C CNN
+	1    10250 6400
+	0    1    -1   0   
+$EndComp
+Wire Wire Line
+	10400 6100 10600 6100
+Wire Wire Line
+	10400 6200 10600 6200
+Wire Wire Line
+	10400 6300 10600 6300
+Wire Wire Line
+	10400 6400 10600 6400
+Wire Wire Line
+	10400 6000 10600 6000
 $EndSCHEMATC
