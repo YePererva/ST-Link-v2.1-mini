@@ -889,19 +889,6 @@ Wire Wire Line
 	2450 6050 2750 6050
 Text Label 2750 6150 0    50   ~ 0
 T_SWO
-$Comp
-L Device:R R3
-U 1 1 5E200C9F
-P 2650 5950
-F 0 "R3" V 2550 5950 50  0000 C CNN
-F 1 "100R" V 2650 5950 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" V 2580 5950 50  0001 C CNN
-F 3 "~" H 2650 5950 50  0001 C CNN
-	1    2650 5950
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2500 5950 2450 5950
 NoConn ~ 1150 5250
 $Comp
 L Device:R R31
@@ -1118,32 +1105,6 @@ Text Notes 3050 5100 0    50   ~ 0
 Original boards use as ST-link V2.1:\n- STM32F103CBT6 : Nucleo 32 boards [STM8 and STM32F]\n- STM32F103CBT6TR : Nucleo 64 boards with STM8\nOriginal boards use as ST-Link V2:\n- STM32F103C8T6 : F4Discovery\n\nClones use STM32F101****
 Text Label 2750 6050 0    50   ~ 0
 STLINK_LED
-Wire Wire Line
-	2800 5950 3250 5950
-Wire Wire Line
-	3250 5950 3250 6050
-$Comp
-L Device:C C3
-U 1 1 5E1D64BC
-P 3250 6200
-F 0 "C3" H 3365 6246 50  0000 L CNN
-F 1 "20pF" H 3365 6155 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 3288 6050 50  0001 C CNN
-F 3 "~" H 3250 6200 50  0001 C CNN
-	1    3250 6200
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GNDREF #PWR011
-U 1 1 5E1D6D8E
-P 3250 6350
-F 0 "#PWR011" H 3250 6100 50  0001 C CNN
-F 1 "GNDREF" H 3255 6177 50  0000 C CNN
-F 2 "" H 3250 6350 50  0001 C CNN
-F 3 "" H 3250 6350 50  0001 C CNN
-	1    3250 6350
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R R18
 U 1 1 5E1E8B0C
@@ -1205,7 +1166,7 @@ Text GLabel 10700 3200 2    50   Output ~ 0
 T_SWDIOh
 Text GLabel 10700 3300 2    50   Output ~ 0
 T_SWDCLKh
-Text GLabel 8600 3750 2    50   Input ~ 0
+Text GLabel 8700 3750 2    50   Input ~ 0
 T_SWOh
 Text GLabel 10700 3600 2    50   Output ~ 0
 T_NRST_SWDh
@@ -1244,34 +1205,6 @@ F 3 "" H 9800 3350 50  0001 C CNN
 $EndComp
 Wire Notes Line
 	7000 4700 11200 4700
-$Comp
-L power:+3V3 #PWR041
-U 1 1 5E20B84F
-P 8400 1650
-F 0 "#PWR041" H 8400 1500 50  0001 C CNN
-F 1 "+3V3" H 8415 1823 50  0000 C CNN
-F 2 "" H 8400 1650 50  0001 C CNN
-F 3 "" H 8400 1650 50  0001 C CNN
-	1    8400 1650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8400 1700 8400 1650
-$Comp
-L Jumper:Jumper_2_Open JP1
-U 1 1 5E211734
-P 8750 1700
-F 0 "JP1" H 8750 1935 50  0000 C CNN
-F 1 "Jumper_2_Open" H 8750 1844 50  0000 C CNN
-F 2 "" H 8750 1700 50  0001 C CNN
-F 3 "~" H 8750 1700 50  0001 C CNN
-	1    8750 1700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	8400 1700 8550 1700
-Text Notes 8350 1950 0    50   ~ 0
-Just in case there is a need\nto power target from ST-Link
 Text Notes 7000 4550 0    150  Italic 30
 Inner Wiring Of Interfaces 
 Wire Notes Line
@@ -1372,7 +1305,7 @@ U 1 1 5E26F813
 P 5800 6500
 F 0 "C11" H 5918 6546 50  0000 L CNN
 F 1 "22uF" H 5918 6455 50  0000 L CNN
-F 2 "" H 5838 6350 50  0001 C CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-7343-30_AVX-N" H 5838 6350 50  0001 C CNN
 F 3 "~" H 5800 6500 50  0001 C CNN
 	1    5800 6500
 	1    0    0    -1  
@@ -1383,7 +1316,7 @@ U 1 1 5E270620
 P 4500 6500
 F 0 "C7" H 4618 6546 50  0000 L CNN
 F 1 "22uF" H 4618 6455 50  0000 L CNN
-F 2 "" H 4538 6350 50  0001 C CNN
+F 2 "Capacitor_Tantalum_SMD:CP_EIA-7343-30_AVX-N" H 4538 6350 50  0001 C CNN
 F 3 "~" H 4500 6500 50  0001 C CNN
 	1    4500 6500
 	1    0    0    -1  
@@ -1427,7 +1360,7 @@ U 1 1 5E279A8B
 P 1800 1100
 F 0 "F1" V 1575 1100 50  0000 C CNN
 F 1 "1A" V 1666 1100 50  0000 C CNN
-F 2 "" H 1850 900 50  0001 L CNN
+F 2 "Fuse:Fuse_1210_3225Metric" H 1850 900 50  0001 L CNN
 F 3 "~" H 1800 1100 50  0001 C CNN
 	1    1800 1100
 	0    1    1    0   
@@ -1632,62 +1565,60 @@ Wire Wire Line
 	3100 1000 3100 950 
 Text Label 4600 1000 0    50   ~ 0
 STLINK_LED
-Text GLabel 8600 2850 2    50   Input ~ 0
+Text GLabel 8700 2850 2    50   Input ~ 0
 T_SWIMh
 $Comp
 L power:GNDREF #PWR043
 U 1 1 5E1D3825
-P 9350 3000
-F 0 "#PWR043" H 9350 2750 50  0001 C CNN
-F 1 "GNDREF" H 9355 2827 50  0000 C CNN
-F 2 "" H 9350 3000 50  0001 C CNN
-F 3 "" H 9350 3000 50  0001 C CNN
-	1    9350 3000
+P 9450 3000
+F 0 "#PWR043" H 9450 2750 50  0001 C CNN
+F 1 "GNDREF" H 9455 2827 50  0000 C CNN
+F 2 "" H 9450 3000 50  0001 C CNN
+F 3 "" H 9450 3000 50  0001 C CNN
+	1    9450 3000
 	-1   0    0    -1  
 $EndComp
-Text GLabel 8600 3050 2    50   Output ~ 0
+Text GLabel 8700 3050 2    50   Output ~ 0
 T_NRST_SWIMh
 Text GLabel 10200 3200 0    50   Input ~ 0
 T_Vref
-Text GLabel 8600 2750 2    50   Input ~ 0
+Text GLabel 8700 2750 2    50   Input ~ 0
 T_Vref
 Text GLabel 10600 6000 2    50   Input ~ 0
 T_Vref
 Text GLabel 8650 800  0    50   Input ~ 0
 T_Vref
-Text GLabel 8950 1700 2    50   Input ~ 0
+Text GLabel 8700 3350 2    50   Input ~ 0
 T_Vref
-Text GLabel 8600 3350 2    50   Input ~ 0
-T_Vref
-Text GLabel 8600 3450 2    50   Output ~ 0
+Text GLabel 8700 3450 2    50   Output ~ 0
 T_SWDIOh
 $Comp
 L power:GNDREF #PWR044
 U 1 1 5E1D570B
-P 9350 3600
-F 0 "#PWR044" H 9350 3350 50  0001 C CNN
-F 1 "GNDREF" H 9355 3427 50  0000 C CNN
-F 2 "" H 9350 3600 50  0001 C CNN
-F 3 "" H 9350 3600 50  0001 C CNN
-	1    9350 3600
+P 9450 3600
+F 0 "#PWR044" H 9450 3350 50  0001 C CNN
+F 1 "GNDREF" H 9455 3427 50  0000 C CNN
+F 2 "" H 9450 3600 50  0001 C CNN
+F 3 "" H 9450 3600 50  0001 C CNN
+	1    9450 3600
 	-1   0    0    -1  
 $EndComp
-Text GLabel 8600 3650 2    50   Output ~ 0
+Text GLabel 8700 3650 2    50   Output ~ 0
 T_SWDCLKh
-Text GLabel 8600 3850 2    50   Output ~ 0
+Text GLabel 8700 3850 2    50   Output ~ 0
 T_NRST_SWDh
-Text GLabel 8600 3150 2    50   Output ~ 0
+Text GLabel 8700 3150 2    50   Output ~ 0
 T_VCP_RXh
-Text GLabel 8600 3250 2    50   Input ~ 0
+Text GLabel 8700 3250 2    50   Input ~ 0
 T_VCP_TXh
 Wire Wire Line
-	8600 3550 9350 3550
+	8700 3550 9450 3550
 Wire Wire Line
-	9350 3550 9350 3600
+	9450 3550 9450 3600
 Wire Wire Line
-	8600 2950 9350 2950
+	8700 2950 9450 2950
 Wire Wire Line
-	9350 2950 9350 3000
+	9450 2950 9450 3000
 $Comp
 L Device:R R14
 U 1 1 5E20BB35
@@ -1703,68 +1634,68 @@ Connection ~ 6500 2700
 $Comp
 L power:+5V #PWR039
 U 1 1 5E22A1A8
-P 8050 2700
-F 0 "#PWR039" H 8050 2550 50  0001 C CNN
-F 1 "+5V" H 8065 2873 50  0000 C CNN
-F 2 "" H 8050 2700 50  0001 C CNN
-F 3 "" H 8050 2700 50  0001 C CNN
-	1    8050 2700
+P 7950 2700
+F 0 "#PWR039" H 7950 2550 50  0001 C CNN
+F 1 "+5V" H 7965 2873 50  0000 C CNN
+F 2 "" H 7950 2700 50  0001 C CNN
+F 3 "" H 7950 2700 50  0001 C CNN
+	1    7950 2700
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3V3 #PWR038
 U 1 1 5E22AB7F
-P 7850 2700
-F 0 "#PWR038" H 7850 2550 50  0001 C CNN
-F 1 "+3V3" H 7865 2873 50  0000 C CNN
-F 2 "" H 7850 2700 50  0001 C CNN
-F 3 "" H 7850 2700 50  0001 C CNN
-	1    7850 2700
+P 7750 2700
+F 0 "#PWR038" H 7750 2550 50  0001 C CNN
+F 1 "+3V3" H 7765 2873 50  0000 C CNN
+F 2 "" H 7750 2700 50  0001 C CNN
+F 3 "" H 7750 2700 50  0001 C CNN
+	1    7750 2700
 	1    0    0    -1  
 $EndComp
-Text GLabel 8100 2950 0    50   Input ~ 0
+Text GLabel 8000 2950 0    50   Input ~ 0
 Self_SWDIOh
 $Comp
 L power:GNDREF #PWR033
 U 1 1 5E22B2E4
-P 7400 3100
-F 0 "#PWR033" H 7400 2850 50  0001 C CNN
-F 1 "GNDREF" H 7405 2927 50  0000 C CNN
-F 2 "" H 7400 3100 50  0001 C CNN
-F 3 "" H 7400 3100 50  0001 C CNN
-	1    7400 3100
+P 7300 3100
+F 0 "#PWR033" H 7300 2850 50  0001 C CNN
+F 1 "GNDREF" H 7305 2927 50  0000 C CNN
+F 2 "" H 7300 3100 50  0001 C CNN
+F 3 "" H 7300 3100 50  0001 C CNN
+	1    7300 3100
 	-1   0    0    -1  
 $EndComp
-Text GLabel 8100 3150 0    50   Input ~ 0
+Text GLabel 8000 3150 0    50   Input ~ 0
 Self_SWDCLKh
-Text GLabel 8100 3250 0    50   Input ~ 0
+Text GLabel 8000 3250 0    50   Input ~ 0
 Self_NRSTh
-Text GLabel 8100 3350 0    50   Input ~ 0
+Text GLabel 8000 3350 0    50   Input ~ 0
 Self_SWOh
-Text GLabel 8100 3650 0    50   Input ~ 0
+Text GLabel 8000 3650 0    50   Input ~ 0
 Self_RXh
-Text GLabel 8100 3750 0    50   Input ~ 0
+Text GLabel 8000 3750 0    50   Input ~ 0
 Self_TXh
 $Comp
 L power:GNDREF #PWR040
 U 1 1 5E22C283
-P 8050 3900
-F 0 "#PWR040" H 8050 3650 50  0001 C CNN
-F 1 "GNDREF" H 8055 3727 50  0000 C CNN
-F 2 "" H 8050 3900 50  0001 C CNN
-F 3 "" H 8050 3900 50  0001 C CNN
-	1    8050 3900
+P 7950 3900
+F 0 "#PWR040" H 7950 3650 50  0001 C CNN
+F 1 "GNDREF" H 7955 3727 50  0000 C CNN
+F 2 "" H 7950 3900 50  0001 C CNN
+F 3 "" H 7950 3900 50  0001 C CNN
+	1    7950 3900
 	-1   0    0    -1  
 $EndComp
 $Comp
 L power:+3V3 #PWR036
 U 1 1 5E22CAA0
-P 7500 3550
-F 0 "#PWR036" H 7500 3400 50  0001 C CNN
-F 1 "+3V3" H 7515 3723 50  0000 C CNN
-F 2 "" H 7500 3550 50  0001 C CNN
-F 3 "" H 7500 3550 50  0001 C CNN
-	1    7500 3550
+P 7400 3550
+F 0 "#PWR036" H 7400 3400 50  0001 C CNN
+F 1 "+3V3" H 7415 3723 50  0000 C CNN
+F 2 "" H 7400 3550 50  0001 C CNN
+F 3 "" H 7400 3550 50  0001 C CNN
+	1    7400 3550
 	1    0    0    -1  
 $EndComp
 Text GLabel 8450 5150 0    50   Input ~ 0
@@ -1773,38 +1704,27 @@ Text Label 8750 5150 2    50   ~ 0
 BOOT_0
 Wire Wire Line
 	8450 5150 8750 5150
-Text GLabel 8100 3450 0    50   Input ~ 0
+Text GLabel 8000 3450 0    50   Input ~ 0
 BOOT_0h
 Wire Wire Line
-	8100 2750 8050 2750
+	8000 2750 7950 2750
 Wire Wire Line
-	8050 2750 8050 2700
+	7950 2750 7950 2700
 Wire Wire Line
-	8100 3050 7400 3050
+	8000 3050 7300 3050
 Wire Wire Line
-	7400 3050 7400 3100
+	7300 3050 7300 3100
 Wire Wire Line
-	8100 3550 7500 3550
+	8000 3550 7400 3550
 Wire Wire Line
-	8100 3850 8050 3850
+	8000 3850 7950 3850
 Wire Wire Line
-	8050 3850 8050 3900
-$Comp
-L Connector_Generic:Conn_02x12_Counter_Clockwise J2
-U 1 1 5E2A31A8
-P 8300 3250
-F 0 "J2" H 8350 3967 50  0000 C CNN
-F 1 "Sides" H 8350 3876 50  0000 C CNN
-F 2 "Package_DIP:DIP-24_W15.24mm_Socket" H 8300 3250 50  0001 C CNN
-F 3 "~" H 8300 3250 50  0001 C CNN
-	1    8300 3250
-	1    0    0    -1  
-$EndComp
+	7950 3850 7950 3900
 Wire Wire Line
-	8100 2850 7850 2850
+	8000 2850 7750 2850
 Wire Wire Line
-	7850 2850 7850 2700
-Text Notes 8300 4100 0    50   ~ 0
+	7750 2850 7750 2700
+Text Notes 8400 4100 0    50   ~ 0
 Top-Right 4 pins:\nERNI SWIM connector
 Wire Wire Line
 	6550 2200 6500 2200
@@ -1835,4 +1755,27 @@ Wire Wire Line
 	6050 1200 6050 1300
 Text Notes 4650 1600 0    50   ~ 0
 Top LED : Green\nBottom : Red\nPackage : 3528 (PLCC-4)\nExample : LSG T676
+NoConn ~ 2450 5950
+$Comp
+L Connector_Generic:Conn_01x12 J2
+U 1 1 5E231C28
+P 8200 3250
+F 0 "J2" H 8150 4000 50  0000 L CNN
+F 1 "SELF" H 8100 3900 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x12_P2.54mm_Vertical" H 8200 3250 50  0001 C CNN
+F 3 "~" H 8200 3250 50  0001 C CNN
+	1    8200 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x12 J4
+U 1 1 5E232CFC
+P 8500 3250
+F 0 "J4" H 8450 4000 50  0000 L CNN
+F 1 "TARGET" H 8400 3900 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x12_P2.54mm_Vertical" H 8500 3250 50  0001 C CNN
+F 3 "~" H 8500 3250 50  0001 C CNN
+	1    8500 3250
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC
