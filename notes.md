@@ -17,5 +17,5 @@ Pinout is
 Reserved pins - not connected on target side
 Target VCC doesn't provide power to target board. It is ST-link reference to indicate that target is powered.
 
-# STDC14 to STM32F103C8T6 BluePill
+# STDC14 and 10 Pin Cortex arm debug connector to STM32F103C8T6 BluePill
 https://stackoverflow.com/questions/57538832/how-to-connect-stlink-v3mini-to-a-blue-pill
