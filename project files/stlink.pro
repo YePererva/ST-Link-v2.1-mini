@@ -1,4 +1,4 @@
-update=22/05/2015 07:44:53
+update=15/04/2020 11:12:12
 version=1
 last_client=kicad
 [general]
@@ -31,3 +31,5 @@ NetIExt=net
 version=1
 LibDir=
 [eeschema/libraries]
+[SchematicFrame]
+version=1
