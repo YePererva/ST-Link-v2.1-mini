@@ -1,4 +1,4 @@
-update=15/04/2020 11:12:12
+update=17/04/2020 13:14:03
 version=1
 last_client=kicad
 [general]
@@ -33,3 +33,13 @@ LibDir=
 [eeschema/libraries]
 [SchematicFrame]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceAjustPassiveValues=0
+LabSize=50
+ERC_TestSimilarLabels=1
