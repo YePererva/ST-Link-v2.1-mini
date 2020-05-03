@@ -8,9 +8,9 @@ Title "ST-Link v2.1 Mini"
 Date ""
 Rev ""
 Comp ""
-Comment1 ""
-Comment2 ""
-Comment3 ""
+Comment1 "For isolation of programing interfaces consided use of ISO7231 or ISO764xFM"
+Comment2 "For USB isolation consider use of Si8606AC-B-IS1 or ADuM5000"
+Comment3 "For ESD protection of SWD consider ESDA6V1BC6"
 Comment4 ""
 $EndDescr
 Text Notes 650  700  0    100  Italic 20
