@@ -8,9 +8,9 @@ Title "ST-Link v2.1 Mini Hybrid"
 Date ""
 Rev ""
 Comp ""
-Comment1 "For SWD / SWIM / VCP isolation consided ISO7231 or ISO764xFM"
+Comment1 "For SWD/SWIM/VCP isolation consided ISO7231 or ISO764xFM"
 Comment2 "For USB isolation consider Si8606AC-B-IS1 or ADuM5000/5001 or ADuM1200/1201"
-Comment3 "For ESD protection of SWD / SWIM / VCP consider ESDA6V1BC6"
+Comment3 "For ESD protection of SWD/SWIM/VCP consider ESDA6V1BC6, of TXS0108E for level shifting"
 Comment4 "For ESD protection of USB consider NUP2201 or USBLC6-2P6"
 $EndDescr
 Text Notes 650  700  0    100  Italic 20
@@ -704,37 +704,13 @@ F 3 "" H 1650 7550 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2600 6650 2450 6650
-$Comp
-L Device:R R4
-U 1 1 5E5B2510
-P 2750 6650
-F 0 "R4" V 2700 6500 50  0000 C CNN
-F 1 "10R" V 2750 6650 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2680 6650 50  0001 C CNN
-F 3 "~" H 2750 6650 50  0001 C CNN
-	1    2750 6650
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2950 6750 2450 6750
-$Comp
-L Device:R R8
-U 1 1 5E55F0CC
-P 3100 6750
-F 0 "R8" V 3050 6600 50  0000 C CNN
-F 1 "10R" V 3100 6750 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3030 6750 50  0001 C CNN
-F 3 "~" H 3100 6750 50  0001 C CNN
-	1    3100 6750
-	0    1    1    0   
-$EndComp
 NoConn ~ 1150 5850
 Text Label 1150 7150 2    50   ~ 0
 T_SWDIO
 Text Label 1150 7050 2    50   ~ 0
 T_SWDCLK
 NoConn ~ 2450 6550
-Text Label 2900 6650 0    50   ~ 0
+Text Label 2600 6650 0    50   ~ 0
 STLINK_LED
 Text Label 1150 5750 2    50   ~ 0
 T_NRST_SWD
@@ -756,7 +732,7 @@ Text Label 2450 6250 0    50   ~ 0
 T_SWDCLK
 Text Label 1150 6950 2    50   ~ 0
 T_SWDIO_IN
-Text Label 3250 6750 0    50   ~ 0
+Text Label 2600 6750 0    50   ~ 0
 T_SWO
 Text Label 2450 7250 0    50   ~ 0
 USB_RENUMn
@@ -913,7 +889,7 @@ F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/da
 	1    1850 5950
 	1    0    0    -1  
 $EndComp
-Text Notes 750  4350 0    50   ~ 0
+Text Notes 600  4350 0    50   ~ 0
 Original boards use as ST-link V2.1:\n- STM32F103CBT6 : Nucleo 32 boards [STM8 and STM32F]\n- STM32F103CBT6TR : Nucleo 64 boards with STM8\nOriginal boards use as ST-Link V2:\n- STM32F103C8T6 : F4Discovery\nSTLink clones use STM32F101****\nSome clones use CKS32F103C8xx
 Text Notes 9350 1000 0    50   ~ 0
 STDC-14: SAMTEC FTSH-107-01-L-DV-K-A
@@ -1139,7 +1115,7 @@ Text GLabel 10350 4000 2    50   Output ~ 0
 T_NRST_SWIM(h)
 Text GLabel 10350 3800 2    50   Input ~ 0
 T_SWIM(h)
-Text Notes 9100 2650 0    100  Italic 20
+Text Notes 9400 2650 0    100  Italic 20
 Side Connectors
 Text GLabel 10350 3500 2    50   Input ~ 0
 T_SWO(h)
@@ -1823,8 +1799,8 @@ F 3 "~" H 9900 3600 50  0001 C CNN
 	1    9900 3600
 	1    0    0    -1  
 $EndComp
-Text Notes 3050 4350 0    50   ~ 0
-KA-NUCLEO-F411CE uses STM32F103CBU6 as STLink\nGreen Pill uses STM32F103CBT6 as Black Magic Probe\nSpeedy uses STM32F103C8T6 as STLink v2.1\n\nSTM32+MSD+VCP or STM32+AUDIO can be done with STM32F1xxCBxx only!\nOther wise: "The up-to-date firmware is too big for this board"
+Text Notes 2950 4350 0    50   ~ 0
+KA-NUCLEO-F411CE uses STM32F103CBU6 as STLink\nGreen Pill uses STM32F103CBT6 as Black Magic Probe\nSpeedy uses STM32F103C8T6 as STLink v2.1\nBlack Magic Probe 2.1 uses STM32F103BBU6\nSTM32+MSD +VCP or STM32+AUDIO can be done with STM32F1xxCBxx only!\nOther wise: "The up-to-date firmware is too big for this board"
 Wire Wire Line
 	2950 5000 3350 5000
 Connection ~ 2950 5000
@@ -2023,10 +1999,10 @@ $EndComp
 Text Label 6750 800  0    50   ~ 0
 STLINK_LED
 $Comp
-L power:GNDD #PWR?
+L power:GNDD #PWR0101
 U 1 1 5ED115B2
 P 6500 1050
-F 0 "#PWR?" H 6500 800 50  0001 C CNN
+F 0 "#PWR0101" H 6500 800 50  0001 C CNN
 F 1 "GNDD" H 6504 895 50  0000 C CNN
 F 2 "" H 6500 1050 50  0001 C CNN
 F 3 "" H 6500 1050 50  0001 C CNN
@@ -2034,10 +2010,10 @@ F 3 "" H 6500 1050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR0102
 U 1 1 5ED11C16
 P 5700 750
-F 0 "#PWR?" H 5700 600 50  0001 C CNN
+F 0 "#PWR0102" H 5700 600 50  0001 C CNN
 F 1 "+3V3" H 5715 923 50  0000 C CNN
 F 2 "" H 5700 750 50  0001 C CNN
 F 3 "" H 5700 750 50  0001 C CNN
@@ -2159,9 +2135,13 @@ F 3 "~" H 6650 4500 50  0001 C CNN
 $EndComp
 Text Notes 5900 3750 0    100  Italic 20
 HSE
-Text Notes 10100 4550 0    50   ~ 0
-Right side is from\nSTLink v3 (MB1440B)
+Text Notes 10050 4550 0    50   ~ 0
+Pinout of right side is like on\nSTLink v3 (MB1440B)
 Wire Wire Line
 	3350 5400 3350 5000
 Connection ~ 3350 5000
+Wire Wire Line
+	2600 6750 2450 6750
+Text Notes 9950 4550 2    50   ~ 0
+Just in case to convert into\nBlack Magic Probe
 $EndSCHEMATC
