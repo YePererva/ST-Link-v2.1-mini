@@ -1618,92 +1618,6 @@ Wire Wire Line
 Connection ~ 8600 1750
 Text Label 1150 5350 2    50   ~ 0
 Board_ID
-$Comp
-L MCU_ST_STM32F1:STM32F103CBUx U2
-U 1 1 5EA01F43
-P 4700 5950
-F 0 "U2" H 5000 4400 50  0000 C CNN
-F 1 "STM32F103CBUx" H 5250 4500 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm" H 4100 4550 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00161566.pdf" H 4700 5950 50  0001 C CNN
-	1    4700 5950
-	1    0    0    -1  
-$EndComp
-Text Label 4000 4650 2    50   ~ 0
-STLINK_NRST
-Wire Wire Line
-	4900 4450 4900 4400
-Wire Wire Line
-	4900 4400 4800 4400
-Wire Wire Line
-	4800 4450 4800 4400
-Connection ~ 4800 4400
-Wire Wire Line
-	4800 4400 4700 4400
-Wire Wire Line
-	4700 4450 4700 4400
-Connection ~ 4700 4400
-Wire Wire Line
-	4700 4400 4600 4400
-Wire Wire Line
-	4600 4450 4600 4400
-Connection ~ 4600 4400
-Wire Wire Line
-	4600 4400 4500 4400
-Wire Wire Line
-	4500 4450 4500 4400
-Wire Wire Line
-	4900 7500 4900 7450
-Wire Wire Line
-	4800 7450 4800 7500
-Connection ~ 4800 7500
-Wire Wire Line
-	4800 7500 4900 7500
-Wire Wire Line
-	4700 7450 4700 7500
-Connection ~ 4700 7500
-Wire Wire Line
-	4700 7500 4800 7500
-Wire Wire Line
-	4600 7450 4600 7500
-Connection ~ 4600 7500
-Wire Wire Line
-	4600 7500 4700 7500
-Wire Wire Line
-	4500 7450 4500 7500
-Wire Wire Line
-	4500 7500 4600 7500
-Text Label 4000 4850 2    50   ~ 0
-BOOT_0
-Text Label 4000 5050 2    50   ~ 0
-STLINK_OSC_IN
-Text Label 4000 5150 2    50   ~ 0
-STLINK_OST_OUT
-Text Label 4000 5350 2    50   ~ 0
-Board_ID
-NoConn ~ 4000 5450
-NoConn ~ 4000 5550
-NoConn ~ 4000 5850
-NoConn ~ 4000 6150
-NoConn ~ 4000 7250
-NoConn ~ 5300 5850
-NoConn ~ 5300 6150
-NoConn ~ 5300 6350
-NoConn ~ 5300 6550
-Text Label 5300 6650 0    50   ~ 0
-TX
-Text Label 5300 6750 0    50   ~ 0
-RX
-Text Label 5300 6850 0    50   ~ 0
-STLINK_USB_D-
-Text Label 5300 7250 0    50   ~ 0
-USB_RENUMn
-Text Label 5300 6950 0    50   ~ 0
-STLINK_USB_D+
-Text Label 5300 7150 0    50   ~ 0
-SWDCLK
-Text Label 5300 7050 0    50   ~ 0
-SWDIO
 Wire Wire Line
 	2500 4400 2950 4400
 Wire Wire Line
@@ -1716,67 +1630,11 @@ Wire Wire Line
 	2500 5000 2950 5000
 Wire Wire Line
 	2950 5050 2950 5000
-$Comp
-L power:GNDD #PWR019
-U 1 1 5EBA903C
-P 4900 7550
-F 0 "#PWR019" H 4900 7300 50  0001 C CNN
-F 1 "GNDD" H 4904 7395 50  0000 C CNN
-F 2 "" H 4900 7550 50  0001 C CNN
-F 3 "" H 4900 7550 50  0001 C CNN
-	1    4900 7550
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4900 7550 4900 7500
-Connection ~ 4900 7500
-Text Label 4000 5750 2    50   ~ 0
-T_NRST_SWD
-Text Label 4000 5950 2    50   ~ 0
-BOOT_1
-Text Label 4000 6050 2    50   ~ 0
-SWO
-Text Label 4000 7150 2    50   ~ 0
-T_SWDIO
-Text Label 4000 7050 2    50   ~ 0
-T_SWDCLK
-Text Label 4000 6250 2    50   ~ 0
-T_NRST_SWIM_IN
-Text Label 4000 6350 2    50   ~ 0
-T_NRST_SWIM
-Text Label 4000 6450 2    50   ~ 0
-T_SWIM_IN
-Text Label 4000 6550 2    50   ~ 0
-T_SWIM
-Text Label 4000 6650 2    50   ~ 0
-T_SWIM_IN
-Text Label 4000 6850 2    50   ~ 0
-T_SWIM
-Text Label 4000 6750 2    50   ~ 0
-T_SWIM_IN
-Text Label 4000 6950 2    50   ~ 0
-T_SWDIO_IN
-Text Label 5300 6250 0    50   ~ 0
-T_SWDCLK
-Text Label 5300 6050 0    50   ~ 0
-STLINK_RX
-Text Label 5300 5950 0    50   ~ 0
-STLINK_TX
-Text Label 5300 5750 0    50   ~ 0
-AIN
-Text Label 5300 6450 0    50   ~ 0
-T_JTDI
-Text Notes 1850 7700 0    50   Italic 10
-Second microcontroller is added for possibility to use different package.\nSolder one microcontroller only.
 Wire Wire Line
 	2950 4400 3350 4400
 Wire Wire Line
 	3350 4400 3350 5000
 Connection ~ 2950 4400
-Wire Wire Line
-	4500 4400 3350 4400
-Connection ~ 4500 4400
-Connection ~ 3350 4400
 $Comp
 L Connector_Generic:Conn_01x14 J5
 U 1 1 5E9BF3D9
@@ -2144,4 +2002,146 @@ Wire Wire Line
 	2600 6750 2450 6750
 Text Notes 9950 4550 2    50   ~ 0
 Just in case to convert into\nBlack Magic Probe
+Wire Wire Line
+	4900 7500 4900 7450
+Wire Wire Line
+	4800 7450 4800 7500
+Connection ~ 4800 7500
+Wire Wire Line
+	4800 7500 4900 7500
+Wire Wire Line
+	4700 7450 4700 7500
+Connection ~ 4700 7500
+Wire Wire Line
+	4700 7500 4800 7500
+Wire Wire Line
+	4600 7450 4600 7500
+Connection ~ 4600 7500
+Wire Wire Line
+	4600 7500 4700 7500
+Wire Wire Line
+	4500 7450 4500 7500
+Wire Wire Line
+	4500 7500 4600 7500
+$Comp
+L power:GNDD #PWR?
+U 1 1 5EC7BAF8
+P 4900 7550
+F 0 "#PWR?" H 4900 7300 50  0001 C CNN
+F 1 "GNDD" H 4904 7395 50  0000 C CNN
+F 2 "" H 4900 7550 50  0001 C CNN
+F 3 "" H 4900 7550 50  0001 C CNN
+	1    4900 7550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4900 7550 4900 7500
+Connection ~ 4900 7500
+Text Notes 1850 7700 0    50   Italic 10
+Second microcontroller is added for possibility to use different package.\nSolder one microcontroller only.
+Text Label 5300 6450 0    50   ~ 0
+T_JTDI
+Text Label 5300 5750 0    50   ~ 0
+AIN
+Text Label 5300 5950 0    50   ~ 0
+STLINK_TX
+Text Label 5300 6050 0    50   ~ 0
+STLINK_RX
+Text Label 5300 6250 0    50   ~ 0
+T_SWDCLK
+Text Label 4000 6950 2    50   ~ 0
+T_SWDIO_IN
+Text Label 4000 6750 2    50   ~ 0
+T_SWIM_IN
+Text Label 4000 6850 2    50   ~ 0
+T_SWIM
+Text Label 4000 6650 2    50   ~ 0
+T_SWIM_IN
+Text Label 4000 6550 2    50   ~ 0
+T_SWIM
+Text Label 4000 6450 2    50   ~ 0
+T_SWIM_IN
+Text Label 4000 6350 2    50   ~ 0
+T_NRST_SWIM
+Text Label 4000 6250 2    50   ~ 0
+T_NRST_SWIM_IN
+Text Label 4000 7050 2    50   ~ 0
+T_SWDCLK
+Text Label 4000 7150 2    50   ~ 0
+T_SWDIO
+Text Label 4000 6050 2    50   ~ 0
+SWO
+Text Label 4000 5950 2    50   ~ 0
+BOOT_1
+Text Label 4000 5750 2    50   ~ 0
+T_NRST_SWD
+Text Label 5300 7050 0    50   ~ 0
+SWDIO
+Text Label 5300 7150 0    50   ~ 0
+SWDCLK
+Text Label 5300 6950 0    50   ~ 0
+STLINK_USB_D+
+Text Label 5300 7250 0    50   ~ 0
+USB_RENUMn
+Text Label 5300 6850 0    50   ~ 0
+STLINK_USB_D-
+Text Label 5300 6750 0    50   ~ 0
+RX
+Text Label 5300 6650 0    50   ~ 0
+TX
+NoConn ~ 5300 6550
+NoConn ~ 5300 6350
+NoConn ~ 5300 6150
+NoConn ~ 5300 5850
+NoConn ~ 4000 7250
+NoConn ~ 4000 6150
+NoConn ~ 4000 5850
+NoConn ~ 4000 5550
+NoConn ~ 4000 5450
+Text Label 4000 5350 2    50   ~ 0
+Board_ID
+Text Label 4000 5150 2    50   ~ 0
+STLINK_OST_OUT
+Text Label 4000 5050 2    50   ~ 0
+STLINK_OSC_IN
+Text Label 4000 4850 2    50   ~ 0
+BOOT_0
+Wire Wire Line
+	4500 4450 4500 4400
+Wire Wire Line
+	4600 4400 4500 4400
+Connection ~ 4600 4400
+Wire Wire Line
+	4600 4450 4600 4400
+Wire Wire Line
+	4700 4400 4600 4400
+Connection ~ 4700 4400
+Wire Wire Line
+	4700 4450 4700 4400
+Wire Wire Line
+	4800 4400 4700 4400
+Connection ~ 4800 4400
+Wire Wire Line
+	4800 4450 4800 4400
+Wire Wire Line
+	4900 4400 4800 4400
+Wire Wire Line
+	4900 4450 4900 4400
+Text Label 4000 4650 2    50   ~ 0
+STLINK_NRST
+$Comp
+L MCU_ST_STM32F1:STM32F103CBUx U?
+U 1 1 5EC7BB3B
+P 4700 5950
+F 0 "U?" H 5000 4400 50  0000 C CNN
+F 1 "STM32F103CBUx" H 5250 4500 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm" H 4100 4550 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00161566.pdf" H 4700 5950 50  0001 C CNN
+	1    4700 5950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 4400 3350 4400
+Connection ~ 4500 4400
+Connection ~ 3350 4400
 $EndSCHEMATC
