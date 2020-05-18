@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title "ST-Link v2.1 Mini Hybrid"
 Date ""
 Rev ""
@@ -123,12 +123,6 @@ Text Label 7750 6050 2    50   ~ 0
 RX
 Text Label 7750 5950 2    50   ~ 0
 TX
-Text GLabel 10550 5850 2    50   Output ~ 0
-T_NRST_SWD(h)
-Text GLabel 10550 5450 2    50   Input ~ 0
-T_SWIM(h)
-Text GLabel 10550 5550 2    50   Output ~ 0
-T_NRST_SWIM(h)
 Text Label 10050 6050 2    50   ~ 0
 T_SWO
 Text Label 10050 5750 2    50   ~ 0
@@ -199,25 +193,21 @@ Wire Wire Line
 Wire Wire Line
 	8200 1800 8200 1750
 Connection ~ 8200 1750
-NoConn ~ 10050 1300
-NoConn ~ 10550 1300
-Text GLabel 10550 1600 2    50   Output ~ 0
+Text GLabel 10550 3550 2    50   Output ~ 0
 T_SWO(h)
-Text GLabel 10550 1500 2    50   Output ~ 0
+Text GLabel 10550 3350 2    50   Output ~ 0
 T_SWDCLK(h)
-Text GLabel 10550 1800 2    50   Output ~ 0
+Text GLabel 10550 3150 2    50   Output ~ 0
 T_NRST_SWD(h)
-Text GLabel 10550 1900 2    50   Input ~ 0
+Text GLabel 10550 4150 2    50   Input ~ 0
 T_VCP_TX(h)
-Text GLabel 10050 1900 0    50   Output ~ 0
+Text GLabel 10550 4050 2    50   Output ~ 0
 T_VCP_RX(h)
 Text Notes 6950 4900 0    150  Italic 30
 Inner Wiring Of Interfaces 
 Text Notes 7000 5000 0    50   ~ 0
 Labels ended with "(h)" are conected to headers
-Text Notes 9300 850  0    100  Italic 20
-STDC-14 as JTAG \nor SWD+VCP
-Text Notes 10200 2150 0    50   ~ 0
+Text Notes 8700 3900 0    50   ~ 0
 Compatible with 10-pin\nCortex Debug Connector
 Text Notes 2600 2050 0    50   ~ 0
 MMBT9013 (SOT-23) is pinout compatible with:\n- MMBT2222 (STM8 Nucleo32)\n- MMBT3904 (Maple Mini, marking 1AM)\n- BC847\n
@@ -378,10 +368,6 @@ Wire Wire Line
 	5750 2500 5750 2450
 Text Label 5550 1000 2    50   ~ 0
 STLINK_LED
-Text GLabel 10050 1400 0    50   Input ~ 0
-T_Vref
-Text GLabel 8150 1350 0    50   Input ~ 0
-T_Vref
 Text GLabel 7800 6150 2    50   Input ~ 0
 BOOT_0(h)
 Text Label 7750 6150 2    50   ~ 0
@@ -401,17 +387,6 @@ F 3 "~" H 10200 6050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10350 5850 10550 5850
-$Comp
-L Connector_Generic:Conn_02x07_Odd_Even J4
-U 1 1 5E20C835
-P 10250 1600
-F 0 "J4" H 10300 2117 50  0000 C CNN
-F 1 "STDC-14" H 10300 2026 50  0000 C CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_2x07_P1.27mm_Vertical_SMD" H 10250 1600 50  0001 C CNN
-F 3 "~" H 10250 1600 50  0001 C CNN
-	1    10250 1600
-	1    0    0    -1  
-$EndComp
 Text Notes 2600 2450 0    50   ~ 0
 STLINK_USB_D(+) and STLINK_USB_D(-):\nshould be a differential pair approx. 90 Ohm\nLength diference of those traces \nmust be  <1.1 mm
 Text Label 10050 5550 2    50   ~ 0
@@ -422,14 +397,8 @@ Text Label 9150 5450 2    50   ~ 0
 T_SWIM_IN
 Text Label 10050 5450 2    50   ~ 0
 T_SWIM
-Text GLabel 10550 1400 2    50   Output ~ 0
+Text GLabel 10550 3450 2    50   Output ~ 0
 T_SWDIO(h)
-Wire Wire Line
-	10050 1600 10000 1600
-Wire Wire Line
-	10000 1600 10000 1500
-Wire Wire Line
-	10000 1500 10050 1500
 Text GLabel 7800 5650 2    50   Input ~ 0
 Self_SWDIO(h)
 Text Label 7750 5750 2    50   ~ 0
@@ -456,12 +425,6 @@ Wire Wire Line
 	7750 6050 7800 6050
 Wire Wire Line
 	7750 5950 7800 5950
-Text GLabel 10550 6050 2    50   Output ~ 0
-T_SWO(h)
-Text GLabel 10550 5750 2    50   Output ~ 0
-T_SWDIO(h)
-Text GLabel 10550 5950 2    50   Output ~ 0
-T_SWDCLK(h)
 $Comp
 L Device:C C2
 U 1 1 5E97B6A3
@@ -555,12 +518,12 @@ $EndComp
 $Comp
 L power:GNDD #PWR047
 U 1 1 5E97F8B9
-P 9350 1550
-F 0 "#PWR047" H 9350 1300 50  0001 C CNN
-F 1 "GNDD" H 9354 1395 50  0000 C CNN
-F 2 "" H 9350 1550 50  0001 C CNN
-F 3 "" H 9350 1550 50  0001 C CNN
-	1    9350 1550
+P 10050 4400
+F 0 "#PWR047" H 10050 4150 50  0001 C CNN
+F 1 "GNDD" H 10054 4245 50  0000 C CNN
+F 2 "" H 10050 4400 50  0001 C CNN
+F 3 "" H 10050 4400 50  0001 C CNN
+	1    10050 4400
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -891,7 +854,7 @@ F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/da
 $EndComp
 Text Notes 600  4350 0    50   ~ 0
 Original boards use as ST-link V2.1:\n- STM32F103CBT6 : Nucleo 32 boards [STM8 and STM32F]\n- STM32F103CBT6TR : Nucleo 64 boards with STM8\nOriginal boards use as ST-Link V2:\n- STM32F103C8T6 : F4Discovery\nSTLink clones use STM32F101****\nSome clones use CKS32F103C8xx
-Text Notes 9350 1000 0    50   ~ 0
+Text Notes 9350 2800 0    50   ~ 0
 STDC-14: SAMTEC FTSH-107-01-L-DV-K-A
 Text Label 10050 5950 2    50   ~ 0
 T_SWDCLK
@@ -916,10 +879,6 @@ Wire Wire Line
 	10550 6450 10350 6450
 Wire Wire Line
 	10350 6350 10550 6350
-Text GLabel 10550 6450 2    50   Output ~ 0
-T_VCP_RX(h)
-Text GLabel 10550 6350 2    50   Input ~ 0
-T_VCP_TX(h)
 Text Label 10050 6450 2    50   ~ 0
 STLINK_TX
 Text Label 10050 6350 2    50   ~ 0
@@ -988,136 +947,70 @@ Wire Notes Line
 	6950 5050 11200 5050
 Text Notes 8550 6500 0    50   ~ 0
 47R resistors can be 22R
-Text GLabel 10050 1800 0    50   Output ~ 0
+Text GLabel 9900 4400 0    50   Output ~ 0
 GND_detect(h)
-Text GLabel 9500 2000 2    50   Output ~ 0
+Text GLabel 10450 4350 2    50   Output ~ 0
 GND_detect(h)
 $Comp
 L power:GNDD #PWR048
 U 1 1 5E9AED9E
-P 9350 2050
-F 0 "#PWR048" H 9350 1800 50  0001 C CNN
-F 1 "GNDD" H 9354 1895 50  0000 C CNN
-F 2 "" H 9350 2050 50  0001 C CNN
-F 3 "" H 9350 2050 50  0001 C CNN
-	1    9350 2050
+P 10300 4400
+F 0 "#PWR048" H 10300 4150 50  0001 C CNN
+F 1 "GNDD" H 10304 4245 50  0000 C CNN
+F 2 "" H 10300 4400 50  0001 C CNN
+F 3 "" H 10300 4400 50  0001 C CNN
+	1    10300 4400
 	-1   0    0    -1  
-$EndComp
-$Comp
-L power:GNDD #PWR044
-U 1 1 5E97F0E1
-P 9050 4050
-F 0 "#PWR044" H 9050 3800 50  0001 C CNN
-F 1 "GNDD" H 9054 3895 50  0000 C CNN
-F 2 "" H 9050 4050 50  0001 C CNN
-F 3 "" H 9050 4050 50  0001 C CNN
-	1    9050 4050
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GNDD #PWR046
-U 1 1 5E97EAC1
-P 9100 3650
-F 0 "#PWR046" H 9100 3400 50  0001 C CNN
-F 1 "GNDD" H 9104 3495 50  0000 C CNN
-F 2 "" H 9100 3650 50  0001 C CNN
-F 3 "" H 9100 3650 50  0001 C CNN
-	1    9100 3650
-	1    0    0    -1  
 $EndComp
 $Comp
 L power:GNDD #PWR053
 U 1 1 5E97E7C6
-P 11100 3250
-F 0 "#PWR053" H 11100 3000 50  0001 C CNN
-F 1 "GNDD" H 11104 3095 50  0000 C CNN
-F 2 "" H 11100 3250 50  0001 C CNN
-F 3 "" H 11100 3250 50  0001 C CNN
-	1    11100 3250
+P 8550 3250
+F 0 "#PWR053" H 8550 3000 50  0001 C CNN
+F 1 "GNDD" H 8554 3095 50  0000 C CNN
+F 2 "" H 8550 3250 50  0001 C CNN
+F 3 "" H 8550 3250 50  0001 C CNN
+	1    8550 3250
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GNDD #PWR054
 U 1 1 5E97E441
-P 11100 3950
-F 0 "#PWR054" H 11100 3700 50  0001 C CNN
-F 1 "GNDD" H 11104 3795 50  0000 C CNN
-F 2 "" H 11100 3950 50  0001 C CNN
-F 3 "" H 11100 3950 50  0001 C CNN
-	1    11100 3950
+P 8550 3950
+F 0 "#PWR054" H 8550 3700 50  0001 C CNN
+F 1 "GNDD" H 8554 3795 50  0000 C CNN
+F 2 "" H 8550 3950 50  0001 C CNN
+F 3 "" H 8550 3950 50  0001 C CNN
+	1    8550 3950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9700 3300 9100 3300
+	8550 3900 8550 3950
 Wire Wire Line
-	9050 4000 9050 4050
+	7800 3900 8550 3900
 Wire Wire Line
-	9550 3000 9550 2950
-Text GLabel 9700 3200 0    50   Input ~ 0
-BOOT_0(h)
-$Comp
-L power:+3V3 #PWR049
-U 1 1 5E22CAA0
-P 9350 2950
-F 0 "#PWR049" H 9350 2800 50  0001 C CNN
-F 1 "+3V3" H 9365 3123 50  0000 C CNN
-F 2 "" H 9350 2950 50  0001 C CNN
-F 3 "" H 9350 2950 50  0001 C CNN
-	1    9350 2950
-	1    0    0    -1  
-$EndComp
-Text GLabel 9700 3400 0    50   Input ~ 0
-Self_TX(h)
-Text GLabel 9700 3500 0    50   Input ~ 0
-Self_RX(h)
-Text GLabel 9700 4300 0    50   Input ~ 0
-Self_SWO(h)
-Text GLabel 9700 4200 0    50   Input ~ 0
-Self_NRST(h)
-Text GLabel 9700 3900 0    50   Input ~ 0
-Self_SWDCLK(h)
-Text GLabel 9700 4100 0    50   Input ~ 0
-Self_SWDIO(h)
-$Comp
-L power:+5V #PWR051
-U 1 1 5E22A1A8
-P 9550 2950
-F 0 "#PWR051" H 9550 2800 50  0001 C CNN
-F 1 "+5V" H 9565 3123 50  0000 C CNN
-F 2 "" H 9550 2950 50  0001 C CNN
-F 3 "" H 9550 2950 50  0001 C CNN
-	1    9550 2950
-	1    0    0    -1  
-$EndComp
+	8550 3200 8550 3250
 Wire Wire Line
-	11100 3900 11100 3950
-Wire Wire Line
-	10350 3900 11100 3900
-Wire Wire Line
-	11100 3200 11100 3250
-Wire Wire Line
-	10350 3200 11100 3200
-Text GLabel 10350 4200 2    50   Input ~ 0
+	7800 3200 8550 3200
+Text GLabel 7800 4200 2    50   Input ~ 0
 T_VCP_TX(h)
-Text GLabel 10350 4300 2    50   Output ~ 0
+Text GLabel 7800 4300 2    50   Output ~ 0
 T_VCP_RX(h)
-Text GLabel 10350 3400 2    50   Output ~ 0
+Text GLabel 7800 3400 2    50   Output ~ 0
 T_NRST_SWD(h)
-Text GLabel 10350 3100 2    50   Output ~ 0
+Text GLabel 7800 3100 2    50   Output ~ 0
 T_SWDCLK(h)
-Text GLabel 10350 3300 2    50   Output ~ 0
+Text GLabel 7800 3300 2    50   Output ~ 0
 T_SWDIO(h)
-Text GLabel 10350 3000 2    50   Input ~ 0
+Text GLabel 7800 3700 2    50   Input ~ 0
 T_Vref
-Text GLabel 10350 3700 2    50   Input ~ 0
-T_Vref
-Text GLabel 10350 4000 2    50   Output ~ 0
+Text GLabel 7800 4000 2    50   Output ~ 0
 T_NRST_SWIM(h)
-Text GLabel 10350 3800 2    50   Input ~ 0
+Text GLabel 7800 3800 2    50   Input ~ 0
 T_SWIM(h)
-Text Notes 9400 2650 0    100  Italic 20
-Side Connectors
-Text GLabel 10350 3500 2    50   Input ~ 0
+Text Notes 8000 2700 0    100  Italic 20
+Target Programming Connectors
+Text GLabel 7800 3500 2    50   Input ~ 0
 T_SWO(h)
 Text Notes 8250 1550 0    50   ~ 0
 or:\n1N5817
@@ -1283,8 +1176,6 @@ Wire Wire Line
 Wire Wire Line
 	2050 4400 2500 4400
 Connection ~ 2050 4400
-Text GLabel 10550 1700 2    50   Output ~ 0
-T_JTDI(h)
 Text Label 2450 6450 0    50   ~ 0
 T_JTDI
 Text Label 10050 6150 2    50   ~ 0
@@ -1300,20 +1191,12 @@ F 3 "~" H 10200 6150 50  0001 C CNN
 	1    10200 6150
 	0    1    -1   0   
 $EndComp
-Text GLabel 10550 6150 2    50   Output ~ 0
-T_JTDI(h)
 Wire Wire Line
 	10350 6150 10550 6150
 Wire Wire Line
-	10000 1500 9350 1500
+	10450 4350 10300 4350
 Wire Wire Line
-	9350 1500 9350 1550
-Connection ~ 10000 1500
-Wire Wire Line
-	9500 2000 9350 2000
-Wire Wire Line
-	9350 2000 9350 2050
-NoConn ~ 10050 1700
+	10300 4350 10300 4400
 Wire Wire Line
 	5450 2150 5200 2150
 Connection ~ 5200 2150
@@ -1445,45 +1328,8 @@ F 3 "" H 1500 2900 50  0001 C CNN
 $EndComp
 Text Notes 4750 1800 0    100  Italic 20
 Power Regulator
-NoConn ~ 10350 4100
-NoConn ~ 10350 3600
-Wire Wire Line
-	9700 4000 9050 4000
-$Comp
-L power:+3V3 #PWR050
-U 1 1 5E22AB7F
-P 9400 3800
-F 0 "#PWR050" H 9400 3650 50  0001 C CNN
-F 1 "+3V3" H 9550 3850 50  0000 C CNN
-F 2 "" H 9400 3800 50  0001 C CNN
-F 3 "" H 9400 3800 50  0001 C CNN
-	1    9400 3800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9100 3600 9100 3650
-Wire Wire Line
-	9100 3600 9700 3600
-Wire Wire Line
-	9400 3800 9700 3800
-NoConn ~ 9700 3700
-Wire Wire Line
-	9550 3000 9700 3000
-Wire Wire Line
-	9700 3100 9350 3100
-Wire Wire Line
-	9350 3100 9350 2950
-$Comp
-L power:+3V3 #PWR045
-U 1 1 5EC30F28
-P 9100 3300
-F 0 "#PWR045" H 9100 3150 50  0001 C CNN
-F 1 "+3V3" H 9115 3473 50  0000 C CNN
-F 2 "" H 9100 3300 50  0001 C CNN
-F 3 "" H 9100 3300 50  0001 C CNN
-	1    9100 3300
-	1    0    0    -1  
-$EndComp
+NoConn ~ 7800 4100
+NoConn ~ 7800 3600
 Wire Wire Line
 	7650 1650 7600 1650
 Wire Wire Line
@@ -1638,24 +1484,13 @@ Connection ~ 2950 4400
 $Comp
 L Connector_Generic:Conn_01x14 J5
 U 1 1 5E9BF3D9
-P 10150 3600
-F 0 "J5" H 10068 4417 50  0000 C CNN
-F 1 "Target" H 10068 4326 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical" H 10150 3600 50  0001 C CNN
-F 3 "~" H 10150 3600 50  0001 C CNN
-	1    10150 3600
+P 7600 3600
+F 0 "J5" H 7518 4417 50  0000 C CNN
+F 1 "Target" H 7518 4326 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical" H 7600 3600 50  0001 C CNN
+F 3 "~" H 7600 3600 50  0001 C CNN
+	1    7600 3600
 	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x14 J3
-U 1 1 5E9BE3A0
-P 9900 3600
-F 0 "J3" H 9850 4450 50  0000 L CNN
-F 1 "Self" H 9800 4350 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x14_P2.54mm_Vertical" H 9900 3600 50  0001 C CNN
-F 3 "~" H 9900 3600 50  0001 C CNN
-	1    9900 3600
-	1    0    0    -1  
 $EndComp
 Text Notes 2950 4350 0    50   ~ 0
 KA-NUCLEO-F411CE uses STM32F103CBU6 as STLink\nGreen Pill uses STM32F103CBT6 as Black Magic Probe\nSpeedy uses STM32F103C8T6 as STLink v2.1\nBlack Magic Probe 2.1 uses STM32F103BBU6\nSTM32+MSD +VCP or STM32+AUDIO can be done with STM32F1xxCBxx only!\nOther wise: "The up-to-date firmware is too big for this board"
@@ -1993,14 +1828,14 @@ F 3 "~" H 6650 4500 50  0001 C CNN
 $EndComp
 Text Notes 5900 3750 0    100  Italic 20
 HSE
-Text Notes 10050 4550 0    50   ~ 0
+Text Notes 7500 4550 0    50   ~ 0
 Pinout of right side is like on\nSTLink v3 (MB1440B)
 Wire Wire Line
 	3350 5400 3350 5000
 Connection ~ 3350 5000
 Wire Wire Line
 	2600 6750 2450 6750
-Text Notes 9950 4550 2    50   ~ 0
+Text Notes 11100 2300 2    50   ~ 0
 Just in case to convert into\nBlack Magic Probe
 Wire Wire Line
 	4900 7500 4900 7450
@@ -2024,10 +1859,10 @@ Wire Wire Line
 Wire Wire Line
 	4500 7500 4600 7500
 $Comp
-L power:GNDD #PWR?
+L power:GNDD #PWR019
 U 1 1 5EC7BAF8
 P 4900 7550
-F 0 "#PWR?" H 4900 7300 50  0001 C CNN
+F 0 "#PWR019" H 4900 7300 50  0001 C CNN
 F 1 "GNDD" H 4904 7395 50  0000 C CNN
 F 2 "" H 4900 7550 50  0001 C CNN
 F 3 "" H 4900 7550 50  0001 C CNN
@@ -2130,10 +1965,10 @@ Wire Wire Line
 Text Label 4000 4650 2    50   ~ 0
 STLINK_NRST
 $Comp
-L MCU_ST_STM32F1:STM32F103CBUx U?
+L MCU_ST_STM32F1:STM32F103CBUx U2
 U 1 1 5EC7BB3B
 P 4700 5950
-F 0 "U?" H 5000 4400 50  0000 C CNN
+F 0 "U2" H 5000 4400 50  0000 C CNN
 F 1 "STM32F103CBUx" H 5250 4500 50  0000 C CNN
 F 2 "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm" H 4100 4550 50  0001 R CNN
 F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00161566.pdf" H 4700 5950 50  0001 C CNN
@@ -2144,4 +1979,114 @@ Wire Wire Line
 	4500 4400 3350 4400
 Connection ~ 4500 4400
 Connection ~ 3350 4400
+Text GLabel 10450 2000 2    50   Input ~ 0
+Self_TX(h)
+Text GLabel 10450 1900 2    50   Input ~ 0
+Self_RX(h)
+$Comp
+L power:GNDD #PWR024
+U 1 1 5EC39966
+P 9850 2250
+F 0 "#PWR024" H 9850 2000 50  0001 C CNN
+F 1 "GNDD" H 9854 2095 50  0000 C CNN
+F 2 "" H 9850 2250 50  0001 C CNN
+F 3 "" H 9850 2250 50  0001 C CNN
+	1    9850 2250
+	1    0    0    -1  
+$EndComp
+Text GLabel 10450 1000 2    50   Input ~ 0
+Self_NRST(h)
+NoConn ~ 10450 1700
+Text GLabel 10450 1400 2    50   Input ~ 0
+Self_SWO(h)
+Text GLabel 10450 1200 2    50   Input ~ 0
+Self_SWDCLK(h)
+Text GLabel 10450 1300 2    50   Input ~ 0
+Self_SWDIO(h)
+$Comp
+L power:+3V3 #PWR022
+U 1 1 5EC52EE9
+P 9950 800
+F 0 "#PWR022" H 9950 650 50  0001 C CNN
+F 1 "+3V3" H 9965 973 50  0000 C CNN
+F 2 "" H 9950 800 50  0001 C CNN
+F 3 "" H 9950 800 50  0001 C CNN
+	1    9950 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 4400 9950 4400
+Wire Wire Line
+	9950 4400 9950 4350
+Wire Wire Line
+	10050 4400 10050 4350
+NoConn ~ 10450 1500
+NoConn ~ 10550 3850
+$Comp
+L Connector:Conn_ST_STDC14 J6
+U 1 1 5EC40C2D
+P 9950 1500
+F 0 "J6" H 9507 1546 50  0000 R CNN
+F 1 "Self" H 9507 1455 50  0000 R CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x07_P1.27mm_Vertical_SMD" H 9950 1500 50  0001 C CNN
+F 3 "https://www.st.com/content/ccc/resource/technical/document/user_manual/group1/99/49/91/b6/b2/3a/46/e5/DM00526767/files/DM00526767.pdf/jcr:content/translations/en.DM00526767.pdf" V 9600 250 50  0001 C CNN
+	1    9950 1500
+	1    0    0    -1  
+$EndComp
+Text GLabel 10550 3650 2    50   Output ~ 0
+T_JTDI(h)
+$Comp
+L Connector:Conn_ST_STDC14 J4
+U 1 1 5EC26E87
+P 10050 3650
+F 0 "J4" H 9607 3696 50  0000 R CNN
+F 1 "Target STDC-14" H 9607 3605 50  0000 R CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x07_P1.27mm_Vertical" H 10050 3650 50  0001 C CNN
+F 3 "https://www.st.com/content/ccc/resource/technical/document/user_manual/group1/99/49/91/b6/b2/3a/46/e5/DM00526767/files/DM00526767.pdf/jcr:content/translations/en.DM00526767.pdf" V 9700 2400 50  0001 C CNN
+	1    10050 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10000 2900 10050 2900
+Wire Wire Line
+	10050 2900 10050 2950
+Wire Wire Line
+	9950 2200 9950 2250
+Wire Wire Line
+	9950 2250 9850 2250
+Wire Wire Line
+	9850 2200 9850 2250
+Connection ~ 9850 2250
+Text GLabel 10550 6450 2    50   Output ~ 0
+T_VCP_RX(h)
+Text GLabel 10550 6350 2    50   Input ~ 0
+T_VCP_TX(h)
+Text GLabel 10550 6050 2    50   Output ~ 0
+T_SWO(h)
+Text GLabel 10550 6150 2    50   Output ~ 0
+T_JTDI(h)
+Text GLabel 10550 5950 2    50   Output ~ 0
+T_SWDCLK(h)
+Text GLabel 10550 5850 2    50   Output ~ 0
+T_NRST_SWD(h)
+Text GLabel 10550 5750 2    50   Output ~ 0
+T_SWDIO(h)
+Text GLabel 10550 5550 2    50   Output ~ 0
+T_NRST_SWIM(h)
+Text GLabel 10550 5450 2    50   Input ~ 0
+T_SWIM(h)
+Text GLabel 10000 2900 0    50   Input ~ 0
+T_Vref
+Text GLabel 7800 3000 2    50   Input ~ 0
+T_Vref
+Text GLabel 8150 1350 0    50   Input ~ 0
+T_Vref
+Text Notes 10150 800  0    100  Italic 20
+Self\nProgramming
+$Sheet
+S 14850 3250 14450 4650
+U 5EC31CA9
+F0 "spare connectors" 50
+F1 "spare connectivity.sch" 50
+$EndSheet
 $EndSCHEMATC
