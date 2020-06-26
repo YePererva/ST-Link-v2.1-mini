@@ -1244,12 +1244,12 @@ Self_RX(h)
 $Comp
 L power:GNDD #PWR045
 U 1 1 5EC39966
-P 9850 2250
-F 0 "#PWR045" H 9850 2000 50  0001 C CNN
-F 1 "GNDD" H 9854 2095 50  0000 C CNN
-F 2 "" H 9850 2250 50  0001 C CNN
-F 3 "" H 9850 2250 50  0001 C CNN
-	1    9850 2250
+P 9950 2200
+F 0 "#PWR045" H 9950 1950 50  0001 C CNN
+F 1 "GNDD" H 9954 2045 50  0000 C CNN
+F 2 "" H 9950 2200 50  0001 C CNN
+F 3 "" H 9950 2200 50  0001 C CNN
+	1    9950 2200
 	1    0    0    -1  
 $EndComp
 Text GLabel 10450 1000 2    50   Input ~ 0
@@ -1308,13 +1308,6 @@ Wire Wire Line
 	10000 2900 10050 2900
 Wire Wire Line
 	10050 2900 10050 2950
-Wire Wire Line
-	9950 2200 9950 2250
-Wire Wire Line
-	9950 2250 9850 2250
-Wire Wire Line
-	9850 2200 9850 2250
-Connection ~ 9850 2250
 Text GLabel 10550 6450 2    50   Output ~ 0
 T_VCP_RX(h)
 Text GLabel 10550 6350 2    50   Input ~ 0
@@ -1347,7 +1340,7 @@ U 5EC31CA9
 F0 "spare connectors" 50
 F1 "spare connectivity.sch" 50
 $EndSheet
-Text GLabel 5500 1000 0    50   BiDi ~ 0
+Text GLabel 5550 1000 0    50   BiDi ~ 0
 STLINK_LED
 Text GLabel 6750 800  2    50   BiDi ~ 0
 STLINK_LED
@@ -1940,4 +1933,35 @@ Text GLabel 4150 6750 2    50   Input ~ 0
 T_SWIM_IN
 Wire Wire Line
 	3850 6750 3800 6750
+Wire Wire Line
+	3850 6400 3850 6300
+Wire Wire Line
+	3850 6700 3850 6750
+Connection ~ 3850 6750
+$Comp
+L Device:R R?
+U 1 1 5EF8AF16
+P 9650 2250
+F 0 "R?" V 9550 2250 50  0000 C CNN
+F 1 "100" V 9650 2250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 9580 2250 50  0001 C CNN
+F 3 "~" H 9650 2250 50  0001 C CNN
+	1    9650 2250
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:GNDD #PWR?
+U 1 1 5EF8B5FE
+P 9500 2250
+F 0 "#PWR?" H 9500 2000 50  0001 C CNN
+F 1 "GNDD" H 9504 2095 50  0000 C CNN
+F 2 "" H 9500 2250 50  0001 C CNN
+F 3 "" H 9500 2250 50  0001 C CNN
+	1    9500 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 2250 9850 2250
+Wire Wire Line
+	9850 2250 9850 2200
 $EndSCHEMATC

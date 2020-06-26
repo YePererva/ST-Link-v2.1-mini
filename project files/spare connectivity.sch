@@ -42,10 +42,6 @@ F 3 "" H 2950 3400 50  0001 C CNN
 $EndComp
 Text Notes 2250 1800 0    50   ~ 0
 STDC-14: SAMTEC FTSH-107-01-L-DV-K-A
-Text GLabel 2800 3400 0    50   Output ~ 0
-GND_detect(h)
-Text GLabel 3350 3350 2    50   Output ~ 0
-GND_detect(h)
 $Comp
 L power:GNDD #PWR?
 U 1 1 5EC35CBA
@@ -92,152 +88,156 @@ Wire Wire Line
 Text GLabel 2900 1900 0    50   Input ~ 0
 T_Vref
 Wire Wire Line
-	9750 6100 9750 6050
+	10050 4000 10050 3950
 Wire Wire Line
-	9650 6050 9650 6100
-Connection ~ 9650 6100
+	9950 3950 9950 4000
+Connection ~ 9950 4000
 Wire Wire Line
-	9650 6100 9750 6100
+	9950 4000 10050 4000
 Wire Wire Line
-	9550 6050 9550 6100
-Connection ~ 9550 6100
+	9850 3950 9850 4000
+Connection ~ 9850 4000
 Wire Wire Line
-	9550 6100 9650 6100
+	9850 4000 9950 4000
 Wire Wire Line
-	9450 6050 9450 6100
-Connection ~ 9450 6100
+	9750 3950 9750 4000
+Connection ~ 9750 4000
 Wire Wire Line
-	9450 6100 9550 6100
+	9750 4000 9850 4000
 Wire Wire Line
-	9350 6050 9350 6100
+	9650 3950 9650 4000
 Wire Wire Line
-	9350 6100 9450 6100
+	9650 4000 9750 4000
 $Comp
 L power:GNDD #PWR053
 U 1 1 5EC6BDFB
-P 9750 6150
-F 0 "#PWR053" H 9750 5900 50  0001 C CNN
-F 1 "GNDD" H 9754 5995 50  0000 C CNN
-F 2 "" H 9750 6150 50  0001 C CNN
-F 3 "" H 9750 6150 50  0001 C CNN
-	1    9750 6150
+P 10050 4050
+F 0 "#PWR053" H 10050 3800 50  0001 C CNN
+F 1 "GNDD" H 10054 3895 50  0000 C CNN
+F 2 "" H 10050 4050 50  0001 C CNN
+F 3 "" H 10050 4050 50  0001 C CNN
+	1    10050 4050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9750 6150 9750 6100
-Connection ~ 9750 6100
-Text Notes 6700 6300 0    50   Italic 10
+	10050 4050 10050 4000
+Connection ~ 10050 4000
+Text Notes 8350 4450 0    50   Italic 10
 Second microcontroller is added for possibility to use different package.\nSolder one microcontroller only.
-NoConn ~ 10150 5150
-NoConn ~ 10150 4950
-NoConn ~ 10150 4750
-NoConn ~ 10150 4450
-NoConn ~ 8850 5850
-NoConn ~ 8850 4750
-NoConn ~ 8850 4450
-NoConn ~ 8850 4150
-NoConn ~ 8850 4050
+NoConn ~ 10450 3050
+NoConn ~ 10450 2850
+NoConn ~ 10450 2650
+NoConn ~ 10450 2350
+NoConn ~ 9150 3750
+NoConn ~ 9150 2650
+NoConn ~ 9150 2350
+NoConn ~ 9150 2050
+NoConn ~ 9150 1950
 Wire Wire Line
-	9350 3050 9350 3000
+	9650 950  9650 900 
 Wire Wire Line
-	9450 3050 9450 3000
+	9750 950  9750 900 
 Wire Wire Line
-	9550 3050 9550 3000
+	9850 950  9850 900 
 Wire Wire Line
-	9650 3050 9650 3000
+	9950 950  9950 900 
 Wire Wire Line
-	9750 3050 9750 3000
+	10050 950  10050 900 
 $Comp
 L MCU_ST_STM32F1:STM32F103CBUx U3
 U 1 1 5EC6BE12
-P 9550 4550
-F 0 "U3" H 9850 3000 50  0000 C CNN
-F 1 "STM32F103CBUx" H 10100 3100 50  0000 C CNN
-F 2 "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm" H 8950 3150 50  0001 R CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00161566.pdf" H 9550 4550 50  0001 C CNN
-	1    9550 4550
+P 9850 2450
+F 0 "U3" H 10150 900 50  0000 C CNN
+F 1 "STM32F103CBUx" H 10400 1000 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm" H 9250 1050 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00161566.pdf" H 9850 2450 50  0001 C CNN
+	1    9850 2450
 	1    0    0    -1  
 $EndComp
-Text GLabel 10150 5250 2    50   BiDi ~ 0
+Text GLabel 10450 3150 2    50   BiDi ~ 0
 STLINK_LED
-Text GLabel 8850 3650 0    50   Input ~ 0
+Text GLabel 9150 1550 0    50   Input ~ 0
 OSC_IN
-Text GLabel 8850 3750 0    50   Input ~ 0
+Text GLabel 9150 1650 0    50   Input ~ 0
 OSC_OUT
-Text GLabel 8850 3450 0    50   Input ~ 0
+Text GLabel 9150 1350 0    50   Input ~ 0
 BOOT_0
-Text GLabel 8850 3250 0    50   Input ~ 0
+Text GLabel 9150 1150 0    50   Input ~ 0
 SELF_NRST
-Text GLabel 8850 3950 0    50   Input ~ 0
+Text GLabel 9150 1850 0    50   Input ~ 0
 Board_ID
-Text GLabel 10150 4350 2    50   Input ~ 0
+Text GLabel 10450 2250 2    50   Input ~ 0
 AIN
-Text GLabel 10150 5450 2    50   Input ~ 0
+Text GLabel 10450 3350 2    50   Input ~ 0
 STLINK_USB_D-
-Text GLabel 10150 5550 2    50   Input ~ 0
+Text GLabel 10450 3450 2    50   Input ~ 0
 STLINK_USB_D+
-Text GLabel 10150 5350 2    50   Input ~ 0
+Text GLabel 10450 3250 2    50   Input ~ 0
 T_SWO
-Text GLabel 10150 5650 2    50   Input ~ 0
+Text GLabel 10450 3550 2    50   Input ~ 0
 SWDIO
-Text GLabel 10150 5750 2    50   Input ~ 0
+Text GLabel 10450 3650 2    50   Input ~ 0
 SWDCLK
-Text GLabel 10150 5850 2    50   Input ~ 0
+Text GLabel 10450 3750 2    50   Input ~ 0
 USB_RENUMn
-Text GLabel 8850 4650 0    50   Input ~ 0
+Text GLabel 9150 2550 0    50   Input ~ 0
 SWO
-Text GLabel 8850 4550 0    50   Input ~ 0
+Text GLabel 9150 2450 0    50   Input ~ 0
 BOOT_1
-Text GLabel 8850 5650 0    50   Input ~ 0
+Text GLabel 9150 3550 0    50   Input ~ 0
 T_SWDCLK
-Text GLabel 8850 4350 0    50   Input ~ 0
+Text GLabel 9150 2250 0    50   Input ~ 0
 T_NRST_SWD
-Text GLabel 8850 5350 0    50   Input ~ 0
+Text GLabel 9150 3250 0    50   Input ~ 0
 T_SWIM_IN
-Text GLabel 8850 5250 0    50   Input ~ 0
+Text GLabel 9150 3150 0    50   Input ~ 0
 T_SWIM_IN
-Text GLabel 8850 5050 0    50   Input ~ 0
+Text GLabel 9150 2950 0    50   Input ~ 0
 T_SWIM_IN
-Text GLabel 8850 4850 0    50   Input ~ 0
+Text GLabel 9150 2750 0    50   Input ~ 0
 T_NRST_SWIM_IN
-Text GLabel 8850 5750 0    50   Input ~ 0
+Text GLabel 9150 3650 0    50   Input ~ 0
 T_SWDIO
-Text GLabel 8850 4950 0    50   Input ~ 0
+Text GLabel 9150 2850 0    50   Input ~ 0
 T_NRST_SWIM
-Text GLabel 8850 5550 0    50   Input ~ 0
+Text GLabel 9150 3450 0    50   Input ~ 0
 T_SWDIO_IN
-Text GLabel 8850 5150 0    50   Input ~ 0
+Text GLabel 9150 3050 0    50   Input ~ 0
 T_SWIM
-Text GLabel 8850 5450 0    50   Input ~ 0
+Text GLabel 9150 3350 0    50   Input ~ 0
 T_SWIM
-Text GLabel 10150 4850 2    50   Input ~ 0
+Text GLabel 10450 2750 2    50   Input ~ 0
 T_SWDCLK
-Text GLabel 10150 4650 2    50   Output ~ 0
+Text GLabel 10450 2550 2    50   Output ~ 0
 STLINK_RX
-Text GLabel 10150 4550 2    50   Input ~ 0
+Text GLabel 10450 2450 2    50   Input ~ 0
 STLINK_TX
-Text GLabel 10150 5050 2    50   Input ~ 0
+Text GLabel 10450 2950 2    50   Input ~ 0
 T_JTDI
 Wire Wire Line
-	9350 3000 9450 3000
-Connection ~ 9450 3000
+	9650 900  9750 900 
+Connection ~ 9750 900 
 Wire Wire Line
-	9450 3000 9550 3000
-Connection ~ 9550 3000
+	9750 900  9850 900 
+Connection ~ 9850 900 
 Wire Wire Line
-	9550 3000 9650 3000
-Connection ~ 9650 3000
+	9850 900  9950 900 
+Connection ~ 9950 900 
 Wire Wire Line
-	9650 3000 9750 3000
+	9950 900  10050 900 
 $Comp
 L power:+3.3V #PWR052
 U 1 1 5EC6FD9F
-P 9550 3000
-F 0 "#PWR052" H 9550 2850 50  0001 C CNN
-F 1 "+3.3V" H 9565 3173 50  0000 C CNN
-F 2 "" H 9550 3000 50  0001 C CNN
-F 3 "" H 9550 3000 50  0001 C CNN
-	1    9550 3000
+P 9850 900
+F 0 "#PWR052" H 9850 750 50  0001 C CNN
+F 1 "+3.3V" H 9865 1073 50  0000 C CNN
+F 2 "" H 9850 900 50  0001 C CNN
+F 3 "" H 9850 900 50  0001 C CNN
+	1    9850 900 
 	1    0    0    -1  
 $EndComp
+Text GLabel 3350 3350 2    50   Output ~ 0
+GND_detect(h)
+Text GLabel 2800 3400 0    50   Output ~ 0
+GND_detect(h)
 $EndSCHEMATC
