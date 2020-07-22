@@ -240,4 +240,81 @@ Text GLabel 3350 3350 2    50   Output ~ 0
 GND_detect(h)
 Text GLabel 2800 3400 0    50   Output ~ 0
 GND_detect(h)
+Text Notes 2250 7550 2    50   ~ 0
+Just in case to convert into\nBlack Magic Probe
+Text GLabel 1600 7250 2    50   Input ~ 0
+Self_TX(h)
+Text GLabel 1600 7150 2    50   Input ~ 0
+Self_RX(h)
+$Comp
+L power:GNDD #PWR?
+U 1 1 5F1BD152
+P 1100 7450
+F 0 "#PWR?" H 1100 7200 50  0001 C CNN
+F 1 "GNDD" H 1104 7295 50  0000 C CNN
+F 2 "" H 1100 7450 50  0001 C CNN
+F 3 "" H 1100 7450 50  0001 C CNN
+	1    1100 7450
+	1    0    0    -1  
+$EndComp
+Text GLabel 1600 6250 2    50   Input ~ 0
+Self_NRST(h)
+NoConn ~ 1600 6950
+Text GLabel 1600 6650 2    50   Input ~ 0
+Self_SWO(h)
+Text GLabel 1600 6450 2    50   Input ~ 0
+Self_SWDCLK(h)
+Text GLabel 1600 6550 2    50   Input ~ 0
+Self_SWDIO(h)
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5F1BD15D
+P 1100 6050
+F 0 "#PWR?" H 1100 5900 50  0001 C CNN
+F 1 "+3V3" H 1115 6223 50  0000 C CNN
+F 2 "" H 1100 6050 50  0001 C CNN
+F 3 "" H 1100 6050 50  0001 C CNN
+	1    1100 6050
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1600 6750
+$Comp
+L Connector:Conn_ST_STDC14 J?
+U 1 1 5F1BD164
+P 1100 6750
+F 0 "J?" H 657 6796 50  0000 R CNN
+F 1 "Self" H 657 6705 50  0000 R CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x07_P1.27mm_Vertical_SMD" H 1100 6750 50  0001 C CNN
+F 3 "https://www.st.com/content/ccc/resource/technical/document/user_manual/group1/99/49/91/b6/b2/3a/46/e5/DM00526767/files/DM00526767.pdf/jcr:content/translations/en.DM00526767.pdf" V 750 5500 50  0001 C CNN
+	1    1100 6750
+	1    0    0    -1  
+$EndComp
+Text Notes 650  5750 0    100  Italic 20
+Self\nProgramming
+$Comp
+L Device:R R?
+U 1 1 5F1BD16B
+P 800 7500
+F 0 "R?" V 700 7500 50  0000 C CNN
+F 1 "100" V 800 7500 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 730 7500 50  0001 C CNN
+F 3 "~" H 800 7500 50  0001 C CNN
+	1    800  7500
+	0    1    -1   0   
+$EndComp
+$Comp
+L power:GNDD #PWR?
+U 1 1 5F1BD171
+P 650 7500
+F 0 "#PWR?" H 650 7250 50  0001 C CNN
+F 1 "GNDD" H 654 7345 50  0000 C CNN
+F 2 "" H 650 7500 50  0001 C CNN
+F 3 "" H 650 7500 50  0001 C CNN
+	1    650  7500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  7500 1000 7500
+Wire Wire Line
+	1000 7500 1000 7450
 $EndSCHEMATC
