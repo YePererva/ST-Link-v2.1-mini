@@ -1668,7 +1668,7 @@ Wire Wire Line
 Wire Wire Line
 	2250 1100 2250 1050
 $Comp
-L Connector:USB_C_Receptacle_USB2.0 J1
+L stlink-rescue:USB_C_Receptacle_USB2.0-Connector J1
 U 1 1 5E141D2F
 P 950 1700
 F 0 "J1" H 1057 2567 50  0000 C CNN
