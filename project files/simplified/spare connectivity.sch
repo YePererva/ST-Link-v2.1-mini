@@ -13,80 +13,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text GLabel 3450 2550 2    50   Output ~ 0
-T_SWO(h)
-Text GLabel 3450 2350 2    50   Output ~ 0
-T_SWDCLK(h)
-Text GLabel 3450 2150 2    50   Output ~ 0
-T_NRST_SWD(h)
-Text GLabel 3450 3150 2    50   Input ~ 0
-T_VCP_TX(h)
-Text GLabel 3450 3050 2    50   Output ~ 0
-T_VCP_RX(h)
-Text Notes 1600 2900 0    50   ~ 0
-Compatible with 10-pin\nCortex Debug Connector
-Text GLabel 3450 2450 2    50   Output ~ 0
-T_SWDIO(h)
-$Comp
-L power:GNDD #PWR?
-U 1 1 5EC35CB1
-P 2950 3400
-AR Path="/5EC35CB1" Ref="#PWR?"  Part="1" 
-AR Path="/5EC31CA9/5EC35CB1" Ref="#PWR050"  Part="1" 
-F 0 "#PWR050" H 2950 3150 50  0001 C CNN
-F 1 "GNDD" H 2954 3245 50  0000 C CNN
-F 2 "" H 2950 3400 50  0001 C CNN
-F 3 "" H 2950 3400 50  0001 C CNN
-	1    2950 3400
-	1    0    0    -1  
-$EndComp
-Text Notes 2250 1800 0    50   ~ 0
-STDC-14: SAMTEC FTSH-107-01-L-DV-K-A
-$Comp
-L power:GNDD #PWR?
-U 1 1 5EC35CBA
-P 3200 3400
-AR Path="/5EC35CBA" Ref="#PWR?"  Part="1" 
-AR Path="/5EC31CA9/5EC35CBA" Ref="#PWR051"  Part="1" 
-F 0 "#PWR051" H 3200 3150 50  0001 C CNN
-F 1 "GNDD" H 3204 3245 50  0000 C CNN
-F 2 "" H 3200 3400 50  0001 C CNN
-F 3 "" H 3200 3400 50  0001 C CNN
-	1    3200 3400
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	3350 3350 3200 3350
-Wire Wire Line
-	3200 3350 3200 3400
-Wire Wire Line
-	2800 3400 2850 3400
-Wire Wire Line
-	2850 3400 2850 3350
-Wire Wire Line
-	2950 3400 2950 3350
-NoConn ~ 3450 2850
-Text GLabel 3450 2650 2    50   Output ~ 0
-T_JTDI(h)
-$Comp
-L Connector:Conn_ST_STDC14 J?
-U 1 1 5EC35CC7
-P 2950 2650
-AR Path="/5EC35CC7" Ref="J?"  Part="1" 
-AR Path="/5EC31CA9/5EC35CC7" Ref="J6"  Part="1" 
-F 0 "J6" H 2507 2696 50  0000 R CNN
-F 1 "Target STDC-14" H 2507 2605 50  0000 R CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_2x07_P1.27mm_Vertical_SMD" H 2950 2650 50  0001 C CNN
-F 3 "https://www.st.com/content/ccc/resource/technical/document/user_manual/group1/99/49/91/b6/b2/3a/46/e5/DM00526767/files/DM00526767.pdf/jcr:content/translations/en.DM00526767.pdf" V 2600 1400 50  0001 C CNN
-	1    2950 2650
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2900 1900 2950 1900
-Wire Wire Line
-	2950 1900 2950 1950
-Text GLabel 2900 1900 0    50   Input ~ 0
-T_Vref
 Wire Wire Line
 	10050 4000 10050 3950
 Wire Wire Line
@@ -109,10 +35,10 @@ Wire Wire Line
 Wire Wire Line
 	9650 4000 9750 4000
 $Comp
-L power:GNDD #PWR053
+L power:GNDD #PWR055
 U 1 1 5EC6BDFB
 P 10050 4050
-F 0 "#PWR053" H 10050 3800 50  0001 C CNN
+F 0 "#PWR055" H 10050 3800 50  0001 C CNN
 F 1 "GNDD" H 10054 3895 50  0000 C CNN
 F 2 "" H 10050 4050 50  0001 C CNN
 F 3 "" H 10050 4050 50  0001 C CNN
@@ -226,95 +152,130 @@ Connection ~ 9950 900
 Wire Wire Line
 	9950 900  10050 900 
 $Comp
-L power:+3.3V #PWR052
+L power:+3.3V #PWR050
 U 1 1 5EC6FD9F
 P 9850 900
-F 0 "#PWR052" H 9850 750 50  0001 C CNN
+F 0 "#PWR050" H 9850 750 50  0001 C CNN
 F 1 "+3.3V" H 9865 1073 50  0000 C CNN
 F 2 "" H 9850 900 50  0001 C CNN
 F 3 "" H 9850 900 50  0001 C CNN
 	1    9850 900 
 	1    0    0    -1  
 $EndComp
-Text GLabel 3350 3350 2    50   Output ~ 0
-GND_detect(h)
-Text GLabel 2800 3400 0    50   Output ~ 0
-GND_detect(h)
-Text Notes 2250 7550 2    50   ~ 0
+Text Notes 2400 2850 2    50   ~ 0
 Just in case to convert into\nBlack Magic Probe
-Text GLabel 1600 7250 2    50   Input ~ 0
+Text GLabel 1750 2550 2    50   Input ~ 0
 Self_TX(h)
-Text GLabel 1600 7150 2    50   Input ~ 0
+Text GLabel 1750 2450 2    50   Input ~ 0
 Self_RX(h)
 $Comp
-L power:GNDD #PWR?
+L power:GNDD #PWR052
 U 1 1 5F1BD152
-P 1100 7450
-F 0 "#PWR?" H 1100 7200 50  0001 C CNN
-F 1 "GNDD" H 1104 7295 50  0000 C CNN
-F 2 "" H 1100 7450 50  0001 C CNN
-F 3 "" H 1100 7450 50  0001 C CNN
-	1    1100 7450
+P 1250 2750
+F 0 "#PWR052" H 1250 2500 50  0001 C CNN
+F 1 "GNDD" H 1254 2595 50  0000 C CNN
+F 2 "" H 1250 2750 50  0001 C CNN
+F 3 "" H 1250 2750 50  0001 C CNN
+	1    1250 2750
 	1    0    0    -1  
 $EndComp
-Text GLabel 1600 6250 2    50   Input ~ 0
+Text GLabel 1750 1550 2    50   Input ~ 0
 Self_NRST(h)
-NoConn ~ 1600 6950
-Text GLabel 1600 6650 2    50   Input ~ 0
+NoConn ~ 1750 2250
+Text GLabel 1750 1950 2    50   Input ~ 0
 Self_SWO(h)
-Text GLabel 1600 6450 2    50   Input ~ 0
+Text GLabel 1750 1750 2    50   Input ~ 0
 Self_SWDCLK(h)
-Text GLabel 1600 6550 2    50   Input ~ 0
+Text GLabel 1750 1850 2    50   Input ~ 0
 Self_SWDIO(h)
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR051
 U 1 1 5F1BD15D
-P 1100 6050
-F 0 "#PWR?" H 1100 5900 50  0001 C CNN
-F 1 "+3V3" H 1115 6223 50  0000 C CNN
-F 2 "" H 1100 6050 50  0001 C CNN
-F 3 "" H 1100 6050 50  0001 C CNN
-	1    1100 6050
+P 1250 1350
+F 0 "#PWR051" H 1250 1200 50  0001 C CNN
+F 1 "+3V3" H 1265 1523 50  0000 C CNN
+F 2 "" H 1250 1350 50  0001 C CNN
+F 3 "" H 1250 1350 50  0001 C CNN
+	1    1250 1350
 	1    0    0    -1  
 $EndComp
-NoConn ~ 1600 6750
+NoConn ~ 1750 2050
 $Comp
-L Connector:Conn_ST_STDC14 J?
+L Connector:Conn_ST_STDC14 J6
 U 1 1 5F1BD164
-P 1100 6750
-F 0 "J?" H 657 6796 50  0000 R CNN
-F 1 "Self" H 657 6705 50  0000 R CNN
-F 2 "Connector_PinHeader_1.27mm:PinHeader_2x07_P1.27mm_Vertical_SMD" H 1100 6750 50  0001 C CNN
-F 3 "https://www.st.com/content/ccc/resource/technical/document/user_manual/group1/99/49/91/b6/b2/3a/46/e5/DM00526767/files/DM00526767.pdf/jcr:content/translations/en.DM00526767.pdf" V 750 5500 50  0001 C CNN
-	1    1100 6750
+P 1250 2050
+F 0 "J6" H 807 2096 50  0000 R CNN
+F 1 "Self" H 807 2005 50  0000 R CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x07_P1.27mm_Vertical_SMD" H 1250 2050 50  0001 C CNN
+F 3 "https://www.st.com/content/ccc/resource/technical/document/user_manual/group1/99/49/91/b6/b2/3a/46/e5/DM00526767/files/DM00526767.pdf/jcr:content/translations/en.DM00526767.pdf" V 900 800 50  0001 C CNN
+	1    1250 2050
 	1    0    0    -1  
 $EndComp
-Text Notes 650  5750 0    100  Italic 20
+Text Notes 800  1050 0    100  Italic 20
 Self\nProgramming
+NoConn ~ 1150 2750
 $Comp
-L Device:R R?
-U 1 1 5F1BD16B
-P 800 7500
-F 0 "R?" V 700 7500 50  0000 C CNN
-F 1 "100" V 800 7500 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 730 7500 50  0001 C CNN
-F 3 "~" H 800 7500 50  0001 C CNN
-	1    800  7500
-	0    1    -1   0   
+L Connector_Generic:Conn_01x04 J7
+U 1 1 5FCDFBAC
+P 4200 2700
+F 0 "J7" H 4280 2692 50  0000 L CNN
+F 1 "Conn_01x04" H 4280 2601 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 4200 2700 50  0001 C CNN
+F 3 "~" H 4200 2700 50  0001 C CNN
+	1    4200 2700
+	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDD #PWR?
-U 1 1 5F1BD171
-P 650 7500
-F 0 "#PWR?" H 650 7250 50  0001 C CNN
-F 1 "GNDD" H 654 7345 50  0000 C CNN
-F 2 "" H 650 7500 50  0001 C CNN
-F 3 "" H 650 7500 50  0001 C CNN
-	1    650  7500
+L Connector_Generic:Conn_01x04 J8
+U 1 1 5FCE032D
+P 4200 3450
+F 0 "J8" H 4280 3442 50  0000 L CNN
+F 1 "Conn_01x04" H 4280 3351 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 4200 3450 50  0001 C CNN
+F 3 "~" H 4200 3450 50  0001 C CNN
+	1    4200 3450
+	1    0    0    -1  
+$EndComp
+Text GLabel 4000 3450 0    50   Input ~ 0
+Self_TX(h)
+Text GLabel 4000 3550 0    50   Input ~ 0
+Self_RX(h)
+$Comp
+L power:GNDD #PWR054
+U 1 1 5FCE1122
+P 3950 3700
+F 0 "#PWR054" H 3950 3450 50  0001 C CNN
+F 1 "GNDD" H 3954 3545 50  0000 C CNN
+F 2 "" H 3950 3700 50  0001 C CNN
+F 3 "" H 3950 3700 50  0001 C CNN
+	1    3950 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR053
+U 1 1 5FCE1839
+P 3950 3300
+F 0 "#PWR053" H 3950 3150 50  0001 C CNN
+F 1 "+3V3" H 3965 3473 50  0000 C CNN
+F 2 "" H 3950 3300 50  0001 C CNN
+F 3 "" H 3950 3300 50  0001 C CNN
+	1    3950 3300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	950  7500 1000 7500
+	4000 3350 3950 3350
 Wire Wire Line
-	1000 7500 1000 7450
+	3950 3350 3950 3300
+Wire Wire Line
+	4000 3650 3950 3650
+Wire Wire Line
+	3950 3650 3950 3700
+Text GLabel 4000 2700 0    50   Input ~ 0
+Self_SWO(h)
+Text GLabel 4000 2900 0    50   Input ~ 0
+Self_SWDCLK(h)
+Text GLabel 4000 2800 0    50   Input ~ 0
+Self_SWDIO(h)
+Text GLabel 4000 2600 0    50   Input ~ 0
+Self_NRST(h)
 $EndSCHEMATC
