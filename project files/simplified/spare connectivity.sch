@@ -164,9 +164,9 @@ F 3 "" H 9850 900 50  0001 C CNN
 $EndComp
 Text Notes 2400 2850 2    50   ~ 0
 Just in case to convert into\nBlack Magic Probe
-Text GLabel 1750 2550 2    50   Input ~ 0
-Self_TX(h)
 Text GLabel 1750 2450 2    50   Input ~ 0
+Self_TX(h)
+Text GLabel 1750 2550 2    50   Input ~ 0
 Self_RX(h)
 $Comp
 L power:GNDD #PWR052
