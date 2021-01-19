@@ -373,21 +373,6 @@ Wire Notes Line
 	6950 6450 6950 5050
 Wire Notes Line
 	6950 5050 11200 5050
-Text GLabel 8700 4400 0    50   Output ~ 0
-GND_detect(h)
-Text GLabel 9250 4350 2    50   Output ~ 0
-GND_detect(h)
-$Comp
-L power:GNDD #PWR036
-U 1 1 5E9AED9E
-P 9100 4400
-F 0 "#PWR036" H 9100 4150 50  0001 C CNN
-F 1 "GNDD" H 9104 4245 50  0000 C CNN
-F 2 "" H 9100 4400 50  0001 C CNN
-F 3 "" H 9100 4400 50  0001 C CNN
-	1    9100 4400
-	-1   0    0    -1  
-$EndComp
 $Comp
 L power:GNDD #PWR031
 U 1 1 5E97E7C6
@@ -475,10 +460,6 @@ F 3 "" H 3650 1550 50  0001 C CNN
 	1    3650 1550
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	9250 4350 9100 4350
-Wire Wire Line
-	9100 4350 9100 4400
 Wire Wire Line
 	8100 1100 7850 1100
 Connection ~ 7850 1100
@@ -677,8 +658,6 @@ Wire Wire Line
 	5300 2400 5300 2350
 Wire Wire Line
 	5300 2400 5450 2400
-Wire Wire Line
-	8700 4400 8750 4400
 Wire Wire Line
 	8750 4400 8750 4350
 Wire Wire Line
@@ -1713,4 +1692,7 @@ Wire Wire Line
 	4100 7050 4100 7150
 Wire Wire Line
 	4100 7150 4100 7250
+Wire Wire Line
+	8750 4400 8850 4400
+Connection ~ 8850 4400
 $EndSCHEMATC

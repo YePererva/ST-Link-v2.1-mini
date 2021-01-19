@@ -217,65 +217,65 @@ NoConn ~ 1150 2750
 $Comp
 L Connector_Generic:Conn_01x04 J7
 U 1 1 5FCDFBAC
-P 4200 2700
-F 0 "J7" H 4280 2692 50  0000 L CNN
-F 1 "Conn_01x04" H 4280 2601 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 4200 2700 50  0001 C CNN
-F 3 "~" H 4200 2700 50  0001 C CNN
-	1    4200 2700
+P 3800 1650
+F 0 "J7" H 3880 1642 50  0000 L CNN
+F 1 "Conn_01x04" H 3880 1551 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 3800 1650 50  0001 C CNN
+F 3 "~" H 3800 1650 50  0001 C CNN
+	1    3800 1650
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x04 J8
 U 1 1 5FCE032D
-P 4200 3450
-F 0 "J8" H 4280 3442 50  0000 L CNN
-F 1 "Conn_01x04" H 4280 3351 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 4200 3450 50  0001 C CNN
-F 3 "~" H 4200 3450 50  0001 C CNN
-	1    4200 3450
+P 3800 2400
+F 0 "J8" H 3880 2392 50  0000 L CNN
+F 1 "Conn_01x04" H 3880 2301 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 3800 2400 50  0001 C CNN
+F 3 "~" H 3800 2400 50  0001 C CNN
+	1    3800 2400
 	1    0    0    -1  
 $EndComp
-Text GLabel 4000 3450 0    50   Input ~ 0
+Text GLabel 3600 2400 0    50   Input ~ 0
 Self_TX(h)
-Text GLabel 4000 3550 0    50   Input ~ 0
+Text GLabel 3600 2500 0    50   Input ~ 0
 Self_RX(h)
 $Comp
 L power:GNDD #PWR054
 U 1 1 5FCE1122
-P 3950 3700
-F 0 "#PWR054" H 3950 3450 50  0001 C CNN
-F 1 "GNDD" H 3954 3545 50  0000 C CNN
-F 2 "" H 3950 3700 50  0001 C CNN
-F 3 "" H 3950 3700 50  0001 C CNN
-	1    3950 3700
+P 3550 2650
+F 0 "#PWR054" H 3550 2400 50  0001 C CNN
+F 1 "GNDD" H 3554 2495 50  0000 C CNN
+F 2 "" H 3550 2650 50  0001 C CNN
+F 3 "" H 3550 2650 50  0001 C CNN
+	1    3550 2650
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3V3 #PWR053
 U 1 1 5FCE1839
-P 3950 3300
-F 0 "#PWR053" H 3950 3150 50  0001 C CNN
-F 1 "+3V3" H 3965 3473 50  0000 C CNN
-F 2 "" H 3950 3300 50  0001 C CNN
-F 3 "" H 3950 3300 50  0001 C CNN
-	1    3950 3300
+P 3550 2250
+F 0 "#PWR053" H 3550 2100 50  0001 C CNN
+F 1 "+3V3" H 3565 2423 50  0000 C CNN
+F 2 "" H 3550 2250 50  0001 C CNN
+F 3 "" H 3550 2250 50  0001 C CNN
+	1    3550 2250
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4000 3350 3950 3350
+	3600 2300 3550 2300
 Wire Wire Line
-	3950 3350 3950 3300
+	3550 2300 3550 2250
 Wire Wire Line
-	4000 3650 3950 3650
+	3600 2600 3550 2600
 Wire Wire Line
-	3950 3650 3950 3700
-Text GLabel 4000 2700 0    50   Input ~ 0
+	3550 2600 3550 2650
+Text GLabel 3600 1650 0    50   Input ~ 0
 Self_SWO(h)
-Text GLabel 4000 2900 0    50   Input ~ 0
+Text GLabel 3600 1850 0    50   Input ~ 0
 Self_SWDCLK(h)
-Text GLabel 4000 2800 0    50   Input ~ 0
+Text GLabel 3600 1750 0    50   Input ~ 0
 Self_SWDIO(h)
-Text GLabel 4000 2600 0    50   Input ~ 0
+Text GLabel 3600 1550 0    50   Input ~ 0
 Self_NRST(h)
 $EndSCHEMATC
