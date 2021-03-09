@@ -119,8 +119,6 @@ F 3 "~" H 5950 1300 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	5400 1300 5450 1300
-Wire Wire Line
 	5450 1350 5450 1300
 Connection ~ 5450 1300
 Text GLabel 9350 3550 2    50   Output ~ 0
@@ -425,7 +423,7 @@ Text GLabel 10300 3600 2    50   Input ~ 0
 T_SWO(h)
 Text Notes 5550 1500 0    50   ~ 0
 or:\n1N5817
-Text Notes 4650 1600 0    50   ~ 0
+Text Notes 4650 1800 0    50   ~ 0
 Vref PullDown\ncan be 10K
 $Comp
 L Device:R R1
@@ -477,40 +475,18 @@ $EndComp
 Text Notes 7400 750  0    100  Italic 20
 Power Regulator
 Wire Wire Line
-	4900 1200 4850 1200
-Wire Wire Line
-	4850 1200 4850 1150
-Wire Wire Line
-	4900 1300 4650 1300
-Wire Wire Line
-	4650 1300 4650 1150
+	4750 1200 4750 1150
 $Comp
 L power:+3V3 #PWR07
 U 1 1 5EA68D52
-P 4850 1150
-F 0 "#PWR07" H 4850 1000 50  0001 C CNN
-F 1 "+3V3" H 4865 1323 50  0000 C CNN
-F 2 "" H 4850 1150 50  0001 C CNN
-F 3 "" H 4850 1150 50  0001 C CNN
-	1    4850 1150
+P 4750 1150
+F 0 "#PWR07" H 4750 1000 50  0001 C CNN
+F 1 "+3V3" H 4765 1323 50  0000 C CNN
+F 2 "" H 4750 1150 50  0001 C CNN
+F 3 "" H 4750 1150 50  0001 C CNN
+	1    4750 1150
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_02x02_Odd_Even J1
-U 1 1 5E9AB85E
-P 5100 1200
-F 0 "J1" H 5150 1417 50  0000 C CNN
-F 1 "Power Target" H 5150 1326 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 5100 1200 50  0001 C CNN
-F 3 "~" H 5100 1200 50  0001 C CNN
-	1    5100 1200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5400 1200 5450 1200
-Wire Wire Line
-	5450 1200 5450 1300
-Connection ~ 5450 1200
 Wire Notes Line
 	7300 2450 11150 2450
 $Comp
@@ -699,9 +675,9 @@ STLINK_LED
 Text GLabel 6350 2400 2    50   BiDi ~ 0
 STLINK_LED
 Text GLabel 4050 7150 0    50   Input ~ 0
-SELF_NRST
+Self_NRST
 Text GLabel 7750 5450 0    50   Input ~ 0
-SELF_NRST
+Self_NRST
 Text GLabel 6450 1300 2    50   Input ~ 0
 AIN
 Wire Wire Line
@@ -944,7 +920,7 @@ AIN
 Text GLabel 1150 4700 0    50   Input ~ 0
 Board_ID
 Text GLabel 1150 4000 0    50   Input ~ 0
-SELF_NRST
+Self_NRST
 Text GLabel 1150 4200 0    50   Input ~ 0
 BOOT_0
 Text GLabel 1150 4500 0    50   Input ~ 0
@@ -1205,17 +1181,6 @@ F 3 "" H 7450 1050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VBUS #PWR06
-U 1 1 5F215625
-P 4650 1150
-F 0 "#PWR06" H 4650 1000 50  0001 C CNN
-F 1 "VBUS" H 4665 1323 50  0000 C CNN
-F 2 "" H 4650 1150 50  0001 C CNN
-F 3 "" H 4650 1150 50  0001 C CNN
-	1    4650 1150
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector_Generic:Conn_01x06 J3
 U 1 1 5F2190BA
 P 10100 3300
@@ -1342,8 +1307,6 @@ Wire Wire Line
 	5500 1300 5450 1300
 Wire Wire Line
 	5400 850  5450 850 
-Wire Wire Line
-	5450 850  5450 1200
 Wire Wire Line
 	6150 1300 6400 1300
 Connection ~ 6150 1300
@@ -1695,4 +1658,24 @@ Wire Wire Line
 Wire Wire Line
 	8750 4400 8850 4400
 Connection ~ 8850 4400
+Text GLabel 800  5300 0    50   Input ~ 0
+BOOT_1
+Wire Wire Line
+	5450 850  5450 1300
+Wire Wire Line
+	4750 1200 4900 1200
+Wire Wire Line
+	5300 1300 5450 1300
+$Comp
+L Switch:SW_Push_SPDT SW?
+U 1 1 60705C92
+P 5100 1300
+F 0 "SW?" H 5100 1585 50  0000 C CNN
+F 1 "Power Ext" H 5100 1494 50  0000 C CNN
+F 2 "" H 5100 1300 50  0001 C CNN
+F 3 "~" H 5100 1300 50  0001 C CNN
+	1    5100 1300
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 4900 1400
 $EndSCHEMATC
