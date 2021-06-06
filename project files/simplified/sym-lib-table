@@ -1,3 +1,0 @@
-(sym_lib_table
-  (lib (name stlink-rescue)(type Legacy)(uri ${KIPRJMOD}/stlink-rescue.lib)(options "")(descr ""))
-)
