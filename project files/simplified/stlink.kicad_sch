@@ -1,4 +1,4 @@
-(kicad_sch (version 20210406) (generator eeschema)
+(kicad_sch (version 20210621) (generator eeschema)
 
   (uuid 5ae49db5-eaaa-4dfc-a2b0-9885e4fa3049)
 
@@ -54,7 +54,7 @@
           (number "11" (effects (font (size 1.27 1.27))))
         )
         (pin open_collector line (at 12.7 12.7 180) (length 2.54)
-          (name "~RST" (effects (font (size 1.27 1.27))))
+          (name "~{RST}" (effects (font (size 1.27 1.27))))
           (number "12" (effects (font (size 1.27 1.27))))
         )
         (pin output line (at 12.7 -10.16 180) (length 2.54)
@@ -1525,7 +1525,6 @@
   (junction (at 222.25 27.94) (diameter 1.016) (color 0 0 0 0))
   (junction (at 224.79 111.76) (diameter 1.016) (color 0 0 0 0))
 
-  (no_connect (at 16.51 66.04) (uuid 135b9e7d-2cfa-43d8-96dd-e9fbda3b983c))
   (no_connect (at 29.21 121.92) (uuid 376c0b82-e240-41ef-ab0e-938548eac6b2))
   (no_connect (at 29.21 124.46) (uuid 03b252b0-e9e2-4d43-b0f3-409c2b3ab6db))
   (no_connect (at 29.21 132.08) (uuid 4f869e0a-3a75-4890-9624-338e49f4ce84))
@@ -3083,6 +3082,22 @@
     (pin "1" (uuid b64a2505-5462-4e89-a530-3a09b3e6ce59))
   )
 
+  (symbol (lib_id "power:GNDD") (at 16.51 66.04 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 8545ec10-b5d1-4259-9ef5-726913246f4b)
+    (property "Reference" "#PWR?" (id 0) (at 16.51 72.39 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GNDD" (id 1) (at 16.6116 69.977 0))
+    (property "Footprint" "" (id 2) (at 16.51 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (id 3) (at 16.51 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 6a3d4346-b5f0-4a64-a55a-781dfbd2c1b7))
+  )
+
   (symbol (lib_id "power:GNDD") (at 20.32 135.89 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005ff2d2a7)
@@ -4619,6 +4634,9 @@
     )
     (path "/00000000-0000-0000-0000-00005ec31ca9/00000000-0000-0000-0000-00005ec6bdfb"
       (reference "#PWR055") (unit 1) (value "GNDD") (footprint "")
+    )
+    (path "/8545ec10-b5d1-4259-9ef5-726913246f4b"
+      (reference "#PWR?") (unit 1) (value "GNDD") (footprint "")
     )
     (path "/00000000-0000-0000-0000-00005e270620"
       (reference "C1") (unit 1) (value "22uF") (footprint "Capacitor_Tantalum_SMD:CP_EIA-7343-30_AVX-N")
