@@ -25,3 +25,7 @@ Although, the schematic of original [NUCLEO-L432KC](https://www.st.com/resource/
     The STLink V3 mini can't be connected directly to devboards alike BluePill, etc. due to different connector pinout and size. Here are 2 connectors for STDC14 : as breadboard breakout board and as plug-&-play connector to SWD interface on BluePill board.
 - `references`: \
     references on stuff like pinout of programming interfaces, STLinks made by other people, etc.
+
+### Similar projects
+
+- https://github.com/MartinD-CZ/ST-Link-V21-clone
