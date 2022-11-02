@@ -1,0 +1,1 @@
+Schematic has mistake: R1 should got to GND, not 3.3V
